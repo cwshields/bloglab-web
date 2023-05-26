@@ -1,0 +1,48 @@
+.blog-card {
+  padding: 20px;
+  margin: 12px;
+  background-color: #00337C;
+  border-radius: 12px;
+  .description {
+    margin: 10px 0 14px;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .user-wrap {
+      width: 230px;
+      display: flex;
+      .avatar {
+        width: 60px;
+        height: auto;
+        margin-right: 8px;
+      }
+      .text-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .right-wrap {
+      display: flex;
+      align-items: center;
+      .readtime {
+        width: max-content;
+      }
+      .bookmark,
+      .bookmark:hover {
+        transition-duration: 200ms;
+      }
+      .fa-bookmark {
+        color: #f2f2f2;
+      }
+      .bookmark:hover .fa-bookmark {
+        color: #00d865;
+      }
+      .fa-solid.fa-bookmark {
+        color: #00d865;
+      }
+    }
+  }
+}
