@@ -3,6 +3,8 @@ export default interface BlogProps {
   title: string;
   description: string;
   readTime: number;
+  tags: Array<string>;
   date: string;
   user: string;
+  avatar: string;
 }

@@ -3,20 +3,43 @@
   margin: 12px;
   background-color: #00337C;
   border-radius: 12px;
+  .title {
+    text-transform: capitalize;
+  }
   .description {
     margin: 10px 0 14px;
+  }
+  .tags-wrap {
+    display: flex;
+    margin: 0 -5px;
+    .tag {
+      margin: 0 5px;
+      padding: 3px 10px;
+      border-radius: 30px;
+    }
+    .magenta {
+      background-color: #d11bff;
+    }
+    .green {
+      background-color: #00d865;
+    }
+    .red {
+      background-color: #ff1f1f;
+    }
   }
   .footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 14px;
     .user-wrap {
       width: 230px;
       display: flex;
       .avatar {
-        width: 60px;
+        width: 50px;
         height: auto;
         margin-right: 8px;
+        border-radius: 50%;
       }
       .text-wrap {
         display: flex;
