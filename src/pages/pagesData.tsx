@@ -7,13 +7,15 @@ import BlogProps from "../types/BlogProps";
 
 const blogArgs:BlogProps = {
   id: 0,
-  title:"",
+  title: "",
   description: "",
   readTime: 0,
   tags: [],
   date: "",
-  user: "",
-  avatar: ""
+  user: {
+    name: "",
+    avatar: ""
+  },
  }
 
 const pagesData: routerType[] = [
