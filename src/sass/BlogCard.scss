@@ -17,15 +17,6 @@
       padding: 3px 10px;
       border-radius: 30px;
     }
-    .magenta {
-      background-color: #d11bff;
-    }
-    .green {
-      background-color: #00d865;
-    }
-    .red {
-      background-color: #ff1f1f;
-    }
   }
   .footer {
     display: flex;
@@ -58,10 +49,10 @@
         transition-duration: 200ms;
       }
       .fa-bookmark {
-        color: #f2f2f2;
+        color: #00d865;
       }
       .bookmark:hover .fa-bookmark {
-        color: #00d865;
+        color: #00bd58;
       }
       .fa-solid.fa-bookmark {
         color: #00d865;
