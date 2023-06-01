@@ -1,0 +1,11 @@
+.tags-wrap {
+  margin: 8px -5px;
+  width: 350px;
+  .tag {
+    display: inline-block;
+    margin: 4px 5px;
+    padding: 3px 10px;
+    border-radius: 30px;
+    width: max-content;
+  }
+}
