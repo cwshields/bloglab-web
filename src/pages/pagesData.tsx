@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
 import BlogProps from "../types/BlogProps";
+import Listings from "./Listings/Listings";
+import Podcasts from "./Podcasts/Podcasts";
 
 const blogArgs:BlogProps = {
   id: 0,
@@ -38,6 +40,16 @@ const pagesData: routerType[] = [
     path: "signup",
     element: <Signup />,
     title: "Signup"
+  },
+  {
+    path: "listings",
+    element: <Listings />,
+    title: "Listings"
+  },
+  {
+    path: "podcasts",
+    element: <Podcasts />,
+    title: "Podcasts"
   }
 ];
 
