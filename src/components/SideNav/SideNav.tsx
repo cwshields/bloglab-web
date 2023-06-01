@@ -7,31 +7,28 @@ export default function SideNav() {
         <Link className="link" to="/">
           <span className="icon">🏠</span> Home
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/listings">
           <span className="icon">📜</span> Listings
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/podcasts">
           <span className="icon">🎙️</span> Podcasts
         </Link>
-        <Link className="link" to="/">
-          <span className="icon">🎥</span> Videos
-        </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/guides">
           <span className="icon">📔</span> Guides
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/tags">
           <span className="icon">🏷️</span> Tags
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/faq">
           <span className="icon">💡</span> FAQ
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/shop">
           <span className="icon">🛍️</span> Shop
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/about">
           <span className="icon">👽</span> About
         </Link>
-        <Link className="link" to="/">
+        <Link className="link" to="/contact">
           <span className="icon">🙋</span> Contact
         </Link>
       </div>
