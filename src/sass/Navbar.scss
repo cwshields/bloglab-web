@@ -1,31 +1,62 @@
-.navbar-container {
-  width: 100%;
-  height: 65px;
-  background-color: #e6e6e6;
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 14px;
-}
+@import "./settings/variables.scss";
 
-.navbar-left-wrap, .navbar-right-wrap {
+.navbar-container {
+  background-color: #00337C;
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-content: center;
-  link {
-    height: max-content;
+  .navbar-wrap {
+    width: 1320px;
+    height: $navbar-height;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 15px;
   }
-}
-
-.navbar-left-wrap {
-  display: flex;
-  .logo-wrap {
-    
+  .navbar-left-wrap,
+  .navbar-right-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    a {
+      color: #f2f2f2;
+      height: max-content;
+      text-decoration: none;
+      padding: 0 5px;
+    }
   }
-}
 
-.navbar-right-wrap {
-  display: flex;
-  justify-content: space-between;
-  width: 125px;
+  .navbar-left-wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 405px;
+    .search-bar {
+      position: relative;
+      margin: 0 10px;
+      .form-control {
+        padding-right: 45px;
+      }
+      .search-btn {
+        position: absolute;
+        right: 0;
+      }
+      .btn-outline-primary {
+        border: 1px solid #ffffff00;
+        .fa-magnifying-glass {
+          font-size: 17px;
+          color: #afd3e2;
+        }
+      }
+    }
+    @media (max-width: 485px) {
+      .search-bar {
+        display: none !important;
+      }
+    }
+  }
+  
+  .navbar-right-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 135px;
+  }
 }
