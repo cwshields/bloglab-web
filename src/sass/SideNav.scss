@@ -1,0 +1,26 @@
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  margin: 16px -2px;
+  .link {
+    text-decoration: none;
+    font-size: 19px;
+    padding: 4px 6px;
+    margin: 1px;
+    .icon {
+      width: 30px;
+      display: inline-block;
+    }
+  }
+  .link:hover {
+    background-color: #00db6691;
+    border-radius: 6px;
+    color: #222222;
+  }
+  .other {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 10px 0;
+  }
+}
