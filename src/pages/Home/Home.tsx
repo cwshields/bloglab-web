@@ -1,16 +1,13 @@
 import "../../sass/Home.scss";
 import "../../sass/TagList.scss";
-import { blogs, listings } from "../../data/blogs";
-import BlogCard from "../BlogCard/BlogCard";
-import BlogProps from "../../types/BlogProps";
+import { listings } from "../../data/blogs";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Listing from "../../components/Listing/ListingTab";
 import ListingProps from "../../types/ListingProps";
 import SideNav from "../../components/SideNav/SideNav";
 import FadeIn from "react-fade-in";
-import { Route, Routes, Outlet } from "react-router-dom";
-import BlogList from "../BlogList/BlogListLatest";
+import { Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
