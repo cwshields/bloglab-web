@@ -1,49 +1,55 @@
-import BlogCard from "../BlogCard/BlogCard";
 import "../../sass/Home.scss";
 import "../../sass/TagList.scss";
+import { blogs, listings } from "../../data/blogs";
+import BlogCard from "../BlogCard/BlogCard";
 import BlogProps from "../../types/BlogProps";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { blogs, listings } from "../../data/blogs";
 import Listing from "../../components/Listing/ListingTab";
 import ListingProps from "../../types/ListingProps";
 import SideNav from "../../components/SideNav/SideNav";
+import FadeIn from "react-fade-in";
+import { Route, Routes, Outlet } from "react-router-dom";
+import BlogList from "../BlogList/BlogListLatest";
 
 const Home = () => {
   return (
     <div className="container">
       <SideNav />
       <div className="blog-list">
-        {blogs.map((blog: BlogProps, index: number) => (
-          <BlogCard
-            id={blog.id}
-            key={index}
-            title={blog.title}
-            description={blog.description}
-            readTime={blog.readTime}
-            tags={blog.tags}
-            date={blog.date}
-            user={blog.user}
-          />
-        ))}
+        <div className="category">
+          <Link className="link" to="/home/latest">
+            Latest
+          </Link>
+          <Link className="link" to="/home/top">
+            Top
+          </Link>
+        </div>
+        <Outlet />
       </div>
       <div className="listings-wrap">
-        <div className="listings-header">
+        <div className="listings-header-wrap">
           <h3 className="header">Listings</h3>
-          <Link to="/" className="green-text">See all</Link>
+          <Link to="/listings" className="green-text">
+            See all
+          </Link>
         </div>
-        {listings.map((listing: ListingProps, index: number) => (
-          <Listing
-            id={listing.id}
-            key={index}
-            header={listing.header}
-            tags={listing.tags}
-            body={listing.body}
-            user={listing.user}
-            date={listing.date}
-          />
-        ))}
-        <Button className="create-listing-btn green">Create Listing</Button>
+        <FadeIn>
+          {listings.map((listing: ListingProps, index: number) => (
+            <Listing
+              id={listing.id}
+              key={index}
+              header={listing.header}
+              tags={listing.tags}
+              body={listing.body}
+              user={listing.user}
+              date={listing.date}
+            />
+          ))}
+          <Button className="create-listing-btn btn-success green">
+            Create Listing
+          </Button>
+        </FadeIn>
       </div>
     </div>
   );

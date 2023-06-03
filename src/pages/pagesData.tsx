@@ -1,5 +1,6 @@
 import { routerType } from "../types/router.types";
-import Blog from "./BlogCard/BlogCard";
+import { Navigate } from "react-router-dom";
+import BlogCard from "./BlogCard/BlogCard";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
@@ -20,15 +21,24 @@ const blogArgs:BlogProps = {
   },
  }
 
+ const homeArgs: any = {
+  index: true
+ }
+
 const pagesData: routerType[] = [
   {
     path: "",
-    element: <Home />,
+    element: <Navigate replace to="/home/latest" />,
+    title: ""
+  },
+  {
+    path: "home/*",
+    element: <Home {...homeArgs} />,
     title: "Home"
   },
   {
     path: "blog",
-    element: <Blog {...blogArgs} />,
+    element: <BlogCard {...blogArgs} />,
     title: "Blog"
   },
   {
