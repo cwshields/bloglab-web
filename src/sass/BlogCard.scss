@@ -1,6 +1,6 @@
 .blog-card {
-  padding: 20px;
-  margin: 12px;
+  padding: 20px 24px;
+  margin: 8px 0 16px;
   background-color: #00337C;
   border-radius: 12px;
   .title {
@@ -8,15 +8,6 @@
   }
   .description {
     margin: 10px 0 14px;
-  }
-  .tags-wrap {
-    display: flex;
-    margin: 0 -5px;
-    .tag {
-      margin: 0 5px;
-      padding: 3px 10px;
-      border-radius: 30px;
-    }
   }
   .footer {
     display: flex;
