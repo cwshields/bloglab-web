@@ -6,7 +6,7 @@ import FadeIn from "react-fade-in";
 export default function BlogListLatest() {
   return (
     <>
-      <FadeIn>
+      <FadeIn delay={100}>
         {blogs.map((blog: BlogProps, index: number) => (
           <BlogCard
             id={blog.id}

@@ -19,7 +19,7 @@ export default function BlogListLatest() {
   console.log(blogList);
   return (
     <>
-      <FadeIn>
+      <FadeIn delay={100}>
         {blogList.sort((a, b) =>
           b.props.date
             .split("/")
