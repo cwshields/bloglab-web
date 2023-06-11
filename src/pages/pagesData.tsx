@@ -52,7 +52,7 @@ const pagesData: routerType[] = [
     title: "Signup"
   },
   {
-    path: "listings",
+    path: "listings/*",
     element: <Listings />,
     title: "Listings"
   },
