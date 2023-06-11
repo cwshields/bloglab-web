@@ -3,7 +3,7 @@ import TagList from "../TagList/TagList";
 import "../../sass/ListingTab.scss"
 
 export default function ListingTab(props: ListingProps) {
-  const { header, tags, body, user, date } = props;
+  const { header, tags, body } = props;
   return (
     <div className="listing">
       <h5 className="title">{header}</h5>
