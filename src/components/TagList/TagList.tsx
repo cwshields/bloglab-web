@@ -1,5 +1,3 @@
-import Tag from "../../types/Tag";
-
 export default function TagList(props: any) {
   const { tags } = props;
 
