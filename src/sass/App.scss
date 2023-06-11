@@ -2,6 +2,29 @@
   text-align: center;
 }
 
+body {
+  background-color: #0A2647;
+  color: #f2f2f2;
+}
+
+.btn.bookmark {
+  font-size: larger;
+  padding: 0.2rem 0.5rem;
+  margin: 0 5px;
+}
+
+.btn-outline-primary {
+  color: #00d865;
+  border-color: #00d865;
+}
+.btn-outline-primary:hover {
+  color: #144272;
+  background-color: #00d865;
+}
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.25rem #19875490;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +37,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #13005A;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +58,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.modal-wrap {
+  background-color: #ffffff;
+  border-radius: 12px;
+  width: 350px;
+  height: max-content;
+  padding: 16px;
+  color: #222222;
+  input {
+    border: none;
+  }
+}
+
+.bloglab-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 65px);
 }

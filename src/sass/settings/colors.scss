@@ -7,8 +7,16 @@
 .yellow {
   background-color: #d6cb00;
 }
+.green-text {
+  color: #00d865;
+}
+.green-text:hover {
+  color: #00bd58;
+}
 .green {
+  color: #222222;
   background-color: #00d865;
+  border: none;
 }
 .teal {
   background-color: #00d8b8;
@@ -24,4 +32,16 @@
 }
 .magenta {
   background-color: #d11bff;
+}
+.brown {
+  background-color: #9c5932;
+}
+.black {
+  background-color: #222222;
+}
+.gray {
+  background-color: #808080;
+}
+.white {
+  background-color: #fbfbfb;
 }
