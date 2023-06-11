@@ -1,0 +1,7 @@
+@import "./settings/variables.scss";
+
+.bloglab-container {
+  height: calc(100vh - $navbar-height) ;
+  justify-content: center;
+  align-items: center;
+}
