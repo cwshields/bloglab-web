@@ -48,6 +48,12 @@ const Router = () => {
         <Route path="society" element={<Tags />} />
         <Route path="technology" element={<Tags />} />
       </Route>
+      <Route path="/podcasts" element={<Podcasts />} />
+      <Route path="/guides" element={<Guides />} />
+      <Route path="/faq" element={<Guides />} />
+      <Route path="/shop" element={<Guides />} />
+      <Route path="/about" element={<Guides />} />
+      <Route path="/contact" element={<Guides />} />
     </Routes>
   );
 };
