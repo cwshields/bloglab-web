@@ -1,6 +1,6 @@
 import "../../sass/Home.scss";
 import "../../sass/TagList.scss";
-import { listings } from "../../data/blogs";
+import { listings } from "../../data/listings";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ListingTab from "../../components/Listing/ListingTab";
@@ -27,7 +27,7 @@ const Home = () => {
       <div className="listings-wrap">
         <div className="listings-header-wrap">
           <h3 className="header">Listings</h3>
-          <Link to="/listings" className="green-text">
+          <Link to="/listings/newest" className="green-text">
             See all
           </Link>
         </div>
@@ -41,6 +41,7 @@ const Home = () => {
               body={listing.body}
               user={listing.user}
               date={listing.date}
+              category={listing.category}
             />
           ))}
           <Button className="create-listing-btn btn-success green">
