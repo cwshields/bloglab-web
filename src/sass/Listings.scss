@@ -1,0 +1,36 @@
+.listing-category-nav-wrap {
+  margin-top: 20px;
+  .listing-category-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.listing-wrap {
+  width: 850px;
+  margin: 10px;
+  .listing-card {
+    background-color: #00337c;
+    border-radius: 12px;
+    height: max-content;
+    display: inline-block;
+    padding: 15px 20px 20px;
+    margin: 8px;
+    width: 400px;
+    .listing-content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 325px;
+      .body {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+      }
+      .user-wrap {
+        display: flex;
+      }
+    }
+  }
+}
