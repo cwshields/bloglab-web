@@ -1,8 +1,8 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import { routerType } from "../types/router.types";
 import pagesData from "./pagesData";
-import BlogListLatest from "./BlogList/BlogListLatest";
-import BlogListTop from "./BlogList/BlogListTop";
+import BlogListLatest from "../components/BlogList/BlogListLatest";
+import BlogListTop from "../components/BlogList/BlogListTop";
 import Home from "./Home/Home";
 import Listings from "./Listings/Listings";
 import ListingCardList from "../components/Listing/ListingCardList";
