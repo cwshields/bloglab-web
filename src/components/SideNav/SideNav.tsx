@@ -16,7 +16,7 @@ export default function SideNav() {
       <Link className="link" to="/guides">
         <span className="icon">📔</span> Guides
       </Link>
-      <Link className="link" to="/tags">
+      <Link className="link" to="/tags/all">
         <span className="icon">🏷️</span> Tags
       </Link>
       <Link className="link" to="/faq">
@@ -32,13 +32,13 @@ export default function SideNav() {
         <span className="icon">🙋</span> Contact
       </Link>
       <div className="other">Other</div>
-      <Link className="link" to="/shop">
+      <Link className="link" to="/conduct">
         <span className="icon">👍</span> Code of Conduct
       </Link>
-      <Link className="link" to="/about">
+      <Link className="link" to="/privacy">
         <span className="icon">🔒</span> Privacy Policy
       </Link>
-      <Link className="link" to="/contact">
+      <Link className="link" to="/terms">
         <span className="icon">👀</span> Terms of Use
       </Link>
     </div>
