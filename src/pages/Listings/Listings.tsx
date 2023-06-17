@@ -1,7 +1,6 @@
 import SideNav from "../../components/SideNav/SideNav";
 import { Outlet } from "react-router-dom";
 import "../../sass/Listings.scss";
-import useAxios from "axios-hooks";
 import FadeIn from "react-fade-in";
 import ListingCategoryNav from "../../components/Listing/ListingCategoryNav";
 
