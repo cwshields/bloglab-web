@@ -9,6 +9,13 @@ import ListingCardList from "../components/Listing/ListingCardList";
 import Tags from "./Tags/Tags";
 import Guides from "./Guides/Guides";
 import Podcasts from "./Podcasts/Podcasts";
+import FAQ from "./FAQ/FAQ";
+import Shop from "./Shop/Shop";
+import About from "./About/About";
+import Contact from "./Contact/Contact";
+import Conduct from "./Conduct/Conduct";
+import Privacy from "./Privacy/Privacy";
+import Terms from "./Terms/Terms";
 
 const Router = () => {
   const pageRoutes = pagesData.map(({ path, title, element }: routerType) => {
@@ -37,7 +44,8 @@ const Router = () => {
         <Route path="misc" element={<ListingCardList />} />
         <Route path="products" element={<ListingCardList />} />
       </Route>
-      <Route path="/tag/*" >
+      <Route path="/tags/*" >
+        <Route path="all" element={<Tags />} />
         <Route path="advice" element={<Tags />} />
         <Route path="philosophy" element={<Tags />} />
         <Route path="life" element={<Tags />} />
@@ -50,10 +58,13 @@ const Router = () => {
       </Route>
       <Route path="/podcasts" element={<Podcasts />} />
       <Route path="/guides" element={<Guides />} />
-      <Route path="/faq" element={<Guides />} />
-      <Route path="/shop" element={<Guides />} />
-      <Route path="/about" element={<Guides />} />
-      <Route path="/contact" element={<Guides />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/conduct" element={<Conduct />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/terms" element={<Terms />} />
     </Routes>
   );
 };

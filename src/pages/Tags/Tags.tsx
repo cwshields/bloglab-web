@@ -1,7 +1,9 @@
-
+import SideNav from "../../components/SideNav/SideNav";
 
 export default function Tags() {
   return (
-    <div>Tags</div>
-  )
+    <div className="container">
+      <SideNav />
+    </div>
+  );
 }

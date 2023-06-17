@@ -1,7 +1,9 @@
-import React from 'react'
+import SideNav from "../../components/SideNav/SideNav";
 
 export default function Shop() {
   return (
-    <div>Shop</div>
-  )
+    <div className="container">
+      <SideNav />
+    </div>
+  );
 }

@@ -1,7 +1,9 @@
-import React from 'react'
+import SideNav from "../../components/SideNav/SideNav";
 
 export default function About() {
   return (
-    <div>About</div>
-  )
+    <div className="container">
+      <SideNav />
+    </div>
+  );
 }
