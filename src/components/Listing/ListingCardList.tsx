@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import ListingCard from "./ListingCard";
 import useAxios from "axios-hooks";
 import ListingProps from "../../types/ListingProps";
@@ -8,7 +9,7 @@ export default function ListingCardList() {
     url: "https://zea1btt963.execute-api.eu-west-1.amazonaws.com/dev/get-listings",
   });
 
-  const listingData = data?.listings.map(
+  const listingData: Array<ReactElement> = data?.listings.map(
     (listing: ListingProps, index: number) => (
       <ListingCard
         id={listing.id}
@@ -23,12 +24,15 @@ export default function ListingCardList() {
     )
   );
 
+  const classList: string = "listing-wrap ";
+  const classTernary: string | null = loading ? "display-center" : null;
+
   return (
-    <div className="listing-wrap">
+    <div className={classList + classTernary}>
       {loading ? (
         <img src="https://www.onwebchat.com/img/spinner.gif" alt="Loading..." />
       ) : (
-        listingData.sort((a: any, b: any) =>
+        listingData.sort((a: ReactElement, b: ReactElement) =>
           b.props.date
             .split("/")
             .join()
