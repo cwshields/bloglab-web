@@ -1,5 +1,4 @@
 import BlogProps from "../../types/BlogProps";
-// import { blogs } from "../../data/blogs";
 import useAxios from "axios-hooks";
 import BlogCard from "../../pages/BlogCard/BlogCard";
 import FadeIn from "react-fade-in";
