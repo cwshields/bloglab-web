@@ -1,4 +1,5 @@
 import ListingProps from "../../types/ListingProps";
+import moment from "moment";
 
 export default function ListingCard(props: ListingProps) {
   const { header, body, user, date, category, tags } = props;
@@ -7,10 +8,10 @@ export default function ListingCard(props: ListingProps) {
       <div className="listing-content">
         <div>
           <h4 className="header">{header}</h4>
-          <div className="date">{date}</div>
+          <div className="date">{moment(date).format("MMM DD YYYY")}</div>
           <div className="tags">#{tags}</div>
         </div>
-          <div className="body">{body}</div>
+        <div className="body">{body}</div>
         <div className="user-wrap">
           <img className="avatar" src={user.avatar} alt="Avatar" />
           <div className="text-wrap">
