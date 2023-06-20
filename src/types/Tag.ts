@@ -4,4 +4,5 @@ export default interface Tag {
   description: string;
   guideline: string;
   about?: string;
+  icon?: string;
 }
