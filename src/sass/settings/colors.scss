@@ -1,11 +1,44 @@
+.red-text {
+  color: #ff1f1f;
+}
 .red {
   background-color: #ff1f1f;
 }
+.crimson-text {
+  color: #ce0a0a;
+}
+.crimson {
+  background-color: #ce0a0a;
+}
+.marmalade-text {
+  color: #be6c00;
+}
+.marmalade {
+  background-color: #be6c00;
+}
+.orange-text {
+  color: #d16002;
+}
 .orange {
-  background-color: #d88c00;
+  background-color: #d16002;
+}
+.biscotti-text {
+  color: #e3c565;
+}
+.biscotti {
+  background-color: #e3c565;
+}
+.yellow-text {
+  color: #d6cb00;
 }
 .yellow {
   background-color: #d6cb00;
+}
+.emerald-text {
+  color: #028a0f;
+}
+.emerald {
+  background-color: #028a0f;
 }
 .green-text {
   color: #00d865;
@@ -19,30 +52,120 @@
   background-color: #00d865;
   border: none;
 }
+.teal-text {
+  color: #48aaad;
+}
 .teal {
-  background-color: #00d8b8;
+  background-color: #48aaad;
+}
+.aqua-text {
+  color: #6bcae2;
 }
 .aqua {
-  background-color: #00d4d8;
+  background-color: #6bcae2;
+}
+.blue-text {
+  color: #007ed8;
 }
 .blue {
   background-color: #007ed8;
 }
+.violet-text {
+  color: #1d00d8;
+}
 .violet {
   background-color: #1d00d8;
+}
+.magenta-text {
+  color: #d11bff;
 }
 .magenta {
   background-color: #d11bff;
 }
+.pink-text {
+  color: #fe68ab;
+}
+.pink {
+  background-color: #fe68ab;
+}
+.brown-text {
+  color: #9c5932;
+}
 .brown {
   background-color: #9c5932;
+}
+.black-text {
+  color: #222222;
 }
 .black {
   background-color: #222222;
 }
+.gray-text {
+  color: #808080;
+}
 .gray {
   background-color: #808080;
 }
+.white-text {
+  color: #fbfbfb;
+}
 .white {
   background-color: #fbfbfb;
+}
+
+// Tag Colors
+
+.tag-red {
+  border-top: 12px #ff1f1f solid;
+}
+.tag-crimson {
+  border-top: 12px #ce0a0a solid;
+}
+.tag-marmalade {
+  border-top: 12px #be6c00 solid;
+}
+.tag-orange {
+  border-top: 12px #d16002 solid;
+}
+.tag-biscotti {
+  border-top: 12px #e3c565 solid;
+}
+.tag-yellow {
+  border-top: 12px #d6cb00 solid;
+}
+.tag-emerald {
+  border-top: 12px #028a0f solid;
+}
+.tag-green {
+  border-top: 12px #00d865 solid;
+}
+.tag-teal {
+  border-top: 12px #48aaad solid;
+}
+.tag-aqua {
+  border-top: 12px #6bcae2 solid;
+}
+.tag-blue {
+  border-top: 12px #007ed8 solid;
+}
+.tag-violet {
+  border-top: 12px #1d00d8 solid;
+}
+.tag-magenta {
+  border-top: 12px #d11bff solid;
+}
+.tag-pink {
+  border-top: 12px #fe68ab solid;
+}
+.tag-brown {
+  border-top: 12px #9c5932 solid;
+}
+.tag-black {
+  border-top: 12px #222222 solid;
+}
+.tag-gray {
+  border-top: 12px #808080 solid;
+}
+.tag-white {
+  border-top: 12px #fbfbfb solid;
 }
