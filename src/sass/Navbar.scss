@@ -39,12 +39,16 @@
         position: absolute;
         right: 0;
       }
-      .btn-outline-primary {
+      .btn-outline-green {
         border: 1px solid #ffffff00;
         .fa-magnifying-glass {
           font-size: 17px;
           color: #afd3e2;
         }
+      }
+      .btn-outline-green:hover .fa-magnifying-glass {
+        font-size: 17px;
+        color: #0f0f0f;
       }
     }
     @media (max-width: 485px) {
