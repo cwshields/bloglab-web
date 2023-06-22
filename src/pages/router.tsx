@@ -1,7 +1,5 @@
 // Dependencies
 import { Route, Routes, Navigate } from "react-router-dom";
-import { routerType } from "../types/router.types";
-import pagesData from "./pagesData";
 
 // Page components
 import Home from "./Home/Home";
@@ -30,9 +28,6 @@ import listingCategories from "../data/listingCategories";
 import TagType from "../types/Tag";
 
 const Router = () => {
-  const pageRoutes = pagesData.map(({ path, title, element }: routerType) => {
-    return <Route key={title} path={`/${path}`} element={element} />;
-  });
 
   const tagArrayFilter = (arg: string) =>
     tags.filter((tag) => tag.name === arg);
@@ -46,14 +41,13 @@ const Router = () => {
       />
     );
   });
-  
+
   const listingCategoryMap = listingCategories.map((listing: string, index: number) => {
     return <Route key={index} path={`${listing}`} element={<ListingCardList />} />
   })
 
   return (
     <Routes>
-      {pageRoutes}
       <Route path="" element={<Navigate replace to="/home/latest" />} />
       <Route path="/home/*" element={<Home />}>
         <Route path="latest" element={<BlogListLatest />} />
