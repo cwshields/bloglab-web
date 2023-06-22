@@ -19,7 +19,7 @@ export default function Navbar() {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-primary search-btn" type="submit">
+            <button className="btn btn-outline-green search-btn" type="submit">
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
@@ -29,7 +29,7 @@ export default function Navbar() {
             Login
           </Link>
           <Link to="/signup">
-            <button type="button" className="btn btn-outline-primary">
+            <button type="button" className="btn btn-outline-green">
               Signup
             </button>
           </Link>
