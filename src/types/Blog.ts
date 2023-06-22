@@ -1,6 +1,6 @@
 import User from "./User";
 
-export default interface BlogProps {
+export default interface Blog {
   id: number;
   title: string;
   description: string;
