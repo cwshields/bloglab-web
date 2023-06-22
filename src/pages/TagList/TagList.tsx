@@ -5,20 +5,17 @@ import Tag from "../../types/Tag";
 import FadeIn from "react-fade-in";
 
 export default function Tags() {
-  let last = window.location.pathname
-    .replace(/\/$/, "")
-    .split("/")
-    .splice(-1, 1);
+  // let last = window.location.pathname
+  //   .replace(/\/$/, "")
+  //   .split("/")
+  //   .splice(-1, 1);
   
-  console.log(tags)
-
   return (
     <div className="container">
       <SideNav />
       <div className="tag-list-wrap">
         <div className="tag-list-header">
           <h2>Tag List</h2>
-          {last}
           <form className="d-flex search-bar" role="search">
             <input
               className="form-control"
