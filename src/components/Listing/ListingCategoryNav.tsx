@@ -14,8 +14,8 @@ export default function ListingCategoryNav() {
         />
       </form>
       <div className="listing-category-nav">
-        <Link className="link" to="/listings/newest">
-          All listings
+        <Link className="link" to="/listings/all">
+          All Listings
         </Link>
         <Link className="link" to="/listings/collabs">
           Contributors/Collaborators Wanted

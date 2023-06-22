@@ -7,7 +7,7 @@ export default function SideNav() {
       <Link className="link" to="/">
         <span className="icon">🏠</span> Home
       </Link>
-      <Link className="link" to="/listings/newest">
+      <Link className="link" to="/listings/all">
         <span className="icon">📜</span> Listings
       </Link>
       <Link className="link" to="/podcasts">
