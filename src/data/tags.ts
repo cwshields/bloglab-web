@@ -1,4 +1,6 @@
-const tags = [
+import Tag from "../types/Tag";
+
+const tags: Array<Tag> = [
   {
     name: "storytime",
     color: "violet",

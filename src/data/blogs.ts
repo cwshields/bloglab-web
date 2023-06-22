@@ -1,4 +1,6 @@
-export const blogs = [
+import Blog from "../types/Blog";
+
+export const blogs: Array<Blog> = [
   {
     id: 1,
     title:

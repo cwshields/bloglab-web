@@ -1,4 +1,6 @@
-export const listings = [
+import Listing from "../types/Listing";
+
+export const listings: Array<Listing> = [
   {
     id: 1,
     header: "Hire an Engineer With 5+ Years of Professional Experience",
