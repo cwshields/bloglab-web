@@ -2,7 +2,7 @@ export default interface Tag {
   name: string;
   color: string;
   description: string;
-  guideline: string;
+  guidelines: string;
   about?: string;
   icon?: string;
 }
