@@ -1,12 +1,15 @@
+// Dependencies
 import { Route, Routes, Navigate } from "react-router-dom";
 import { routerType } from "../types/router.types";
 import pagesData from "./pagesData";
+
+// Page components
+import Home from "./Home/Home";
 import BlogListLatest from "../components/BlogList/BlogListLatest";
 import BlogListTop from "../components/BlogList/BlogListTop";
-import Home from "./Home/Home";
 import Listings from "./Listings/Listings";
 import ListingCardList from "../components/Listing/ListingCardList";
-import Tags from "./Tags/Tags";
+import Tag from "./Tag/Tag";
 import Guides from "./Guides/Guides";
 import Podcasts from "./Podcasts/Podcasts";
 import FAQ from "./FAQ/FAQ";
@@ -16,45 +19,52 @@ import Contact from "./Contact/Contact";
 import Conduct from "./Conduct/Conduct";
 import Privacy from "./Privacy/Privacy";
 import Terms from "./Terms/Terms";
+import TagList from "./TagList/TagList";
+
+// Data
+// TODO: Replace with axios calls
+import tags from "../data/tags";
+import listingCategories from "../data/listingCategories";
+
+// Types
+import TagType from "../types/Tag";
 
 const Router = () => {
   const pageRoutes = pagesData.map(({ path, title, element }: routerType) => {
     return <Route key={title} path={`/${path}`} element={element} />;
   });
 
+  const tagArrayFilter = (arg: string) =>
+    tags.filter((tag) => tag.name === arg);
+
+  const tagRoutes = tags.map((tag: TagType, index: number) => {
+    return (
+      <Route
+        key={index}
+        path={`${tag.name}`}
+        element={<Tag {...tagArrayFilter(tag.name)} />}
+      />
+    );
+  });
+  
+  const listingCategoryMap = listingCategories.map((listing: string, index: number) => {
+    return <Route key={index} path={`${listing}`} element={<ListingCardList />} />
+  })
+
   return (
     <Routes>
       {pageRoutes}
-      <Route path="" element={<Navigate replace to="/home/latest" />}/>
+      <Route path="" element={<Navigate replace to="/home/latest" />} />
       <Route path="/home/*" element={<Home />}>
         <Route path="latest" element={<BlogListLatest />} />
         <Route path="top" element={<BlogListTop />} />
       </Route>
       <Route path="/listings/*" element={<Listings />}>
-        <Route path="newest" element={<ListingCardList />} />
-        <Route path="collabs" element={<ListingCardList />} />
-        <Route path="cfp" element={<ListingCardList />} />
-        <Route path="forhire" element={<ListingCardList />} />
-        <Route path="education" element={<ListingCardList />} />
-        <Route path="jobs" element={<ListingCardList />} />
-        <Route path="mentors" element={<ListingCardList />} />
-        <Route path="mentees" element={<ListingCardList />} />
-        <Route path="forsale" element={<ListingCardList />} />
-        <Route path="events" element={<ListingCardList />} />
-        <Route path="misc" element={<ListingCardList />} />
-        <Route path="products" element={<ListingCardList />} />
+        {listingCategoryMap}
       </Route>
-      <Route path="/tags/*" >
-        <Route path="all" element={<Tags />} />
-        <Route path="advice" element={<Tags />} />
-        <Route path="philosophy" element={<Tags />} />
-        <Route path="life" element={<Tags />} />
-        <Route path="storytime" element={<Tags />} />
-        <Route path="inspiration" element={<Tags />} />
-        <Route path="selfhelp" element={<Tags />} />
-        <Route path="jobs" element={<Tags />} />
-        <Route path="society" element={<Tags />} />
-        <Route path="technology" element={<Tags />} />
+      <Route path="/tags/*">
+        <Route path="all" element={<TagList />} />
+        {tagRoutes}
       </Route>
       <Route path="/podcasts" element={<Podcasts />} />
       <Route path="/guides" element={<Guides />} />
