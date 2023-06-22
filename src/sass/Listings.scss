@@ -31,6 +31,12 @@
       .user-wrap {
         display: flex;
       }
+      .tags {
+        margin: 8px -6px;
+        .listing-tag {
+          margin: 0 6px;
+        }
+      }
     }
   }
 }
