@@ -1,6 +1,6 @@
 import User from "./User";
 
-export default interface ListingProps {
+export default interface Listing {
   id: number;
   header: string;
   body: string;
