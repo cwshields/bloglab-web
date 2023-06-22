@@ -4,7 +4,7 @@ import { listings } from "../../data/listings";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ListingTab from "../../components/Listing/ListingTab";
-import ListingProps from "../../types/ListingProps";
+import Listing from "../../types/Listing";
 import SideNav from "../../components/SideNav/SideNav";
 import FadeIn from "react-fade-in";
 import { Outlet } from "react-router-dom";
@@ -32,7 +32,7 @@ const Home = () => {
           </Link>
         </div>
         <FadeIn delay={100}>
-          {listings.map((listing: ListingProps, index: number) => (
+          {listings.map((listing: Listing, index: number) => (
             <ListingTab
               id={listing.id}
               key={index}
