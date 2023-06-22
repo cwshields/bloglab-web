@@ -1,11 +1,11 @@
-import BlogProps from "../../types/BlogProps";
+import Blog from "../../types/Blog";
 import "../../sass/BlogCard.scss";
 import "../../sass/settings/colors.scss";
 import { useState } from "react";
-import TagList from "../../components/TagList/TagList";
+import TagList from "../../components/TagList/ListingTagList";
 import moment from 'moment'
 
-export default function BlogCard(props: BlogProps) {
+export default function BlogCard(props: Blog) {
   const { title, description, user, date, readTime, tags } = props;
 
   const [bookmark, setBookmark] = useState(false);

@@ -1,7 +1,7 @@
-import ListingProps from "../../types/ListingProps";
+import Listing from "../../types/Listing";
 import moment from "moment";
 
-export default function ListingCard(props: ListingProps) {
+export default function ListingCard(props: Listing) {
   const { header, body, user, date, category, tags } = props;
   return (
     <div className="listing-card">

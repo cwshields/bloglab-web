@@ -4,11 +4,11 @@ import BlogCard from "./BlogCard/BlogCard";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Signup from "../pages/Signup/Signup";
-import BlogProps from "../types/BlogProps";
+import Blog from "../types/Blog";
 import Listings from "./Listings/Listings";
 import Podcasts from "./Podcasts/Podcasts";
 
-const blogArgs:BlogProps = {
+const blogArgs:Blog = {
   id: 0,
   title: "",
   description: "",

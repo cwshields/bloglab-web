@@ -1,4 +1,4 @@
-import BlogProps from "../../types/BlogProps";
+import Blog from "../../types/Blog";
 import useAxios from "axios-hooks";
 import BlogCard from "../../pages/BlogCard/BlogCard";
 import FadeIn from "react-fade-in";
@@ -10,7 +10,7 @@ export default function BlogListLatest() {
     url: "https://zea1btt963.execute-api.eu-west-1.amazonaws.com/dev/get-blogs",
   });
 
-  const blogList = data?.blogs.map((blog: BlogProps, index: number) => (
+  const blogList = data?.blogs.map((blog: Blog, index: number) => (
     <BlogCard
       id={blog.id}
       key={index}

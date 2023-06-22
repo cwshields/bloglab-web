@@ -1,8 +1,8 @@
-import ListingProps from "../../types/ListingProps";
-import TagList from "../TagList/TagList";
+import Listing from "../../types/Listing";
+import TagList from "../TagList/ListingTagList";
 import "../../sass/ListingTab.scss"
 
-export default function ListingTab(props: ListingProps) {
+export default function ListingTab(props: Listing) {
   const { header, tags, body } = props;
   return (
     <div className="listing">

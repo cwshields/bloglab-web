@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import ListingCard from "./ListingCard";
 import useAxios from "axios-hooks";
-import ListingProps from "../../types/ListingProps";
+import Listing from "../../types/Listing";
 
 export default function ListingCardList() {
   const [{ data, loading, error } /*, refetch*/] = useAxios({
@@ -10,7 +10,7 @@ export default function ListingCardList() {
   });
 
   const listingData: Array<ReactElement> = data?.listings.map(
-    (listing: ListingProps, index: number) => (
+    (listing: Listing, index: number) => (
       <ListingCard
         id={listing.id}
         key={index}
