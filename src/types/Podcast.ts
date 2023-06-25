@@ -1,9 +1,8 @@
-import Comment from "./Comment";
+import Episode from "./Episode";
 
 export default interface Podcast {
   name: string;
   description: string;
   avatar: string;
-  date: string;
-  comments: Array<Comment>;
+  episodes: Array<Episode>;
 }
