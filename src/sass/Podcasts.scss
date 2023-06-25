@@ -1,0 +1,80 @@
+@import "./settings/colors.scss";
+
+.podcast-wrap {
+  margin: 16px;
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+  }
+  h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 25px 0;
+  }
+  a {
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+  a:hover {
+    color: #00d865;
+  }
+  .podcast-latest {
+    display: flex;
+    flex-direction: row;
+    margin: 0 -8px 16px;
+    .podcast-card {
+      margin: 0 8px;
+      width: 258px;
+      background-color: #00337c;
+      border-radius: 12px;
+      overflow: hidden;
+      img {
+        height: 250px;
+      }
+      .text-wrap {
+        padding: 10px 16px;
+      }
+    }
+  }
+  .featured-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .featured-card {
+      display: inline-block;
+      width: 32.5%;
+      a {
+        .featured-show {
+          width: 350px;
+          height: 350px;
+        }
+        h5 {
+          width: 100%;
+          text-align: center;
+          margin: 12px 0;
+        }
+      }
+    }
+  }
+  .podcast-list-card-wrap {
+    display: inline-block;
+    width: 270px;
+    .podcast-list-card {
+      display: flex;
+      align-items: center;
+      margin: 4px;
+      img {
+        margin-right: 10px;
+        border-radius: 6px;
+        border: 1px solid #0045a570;
+      }
+      .name {
+        text-transform: capitalize;
+      }
+      h5 {
+        font-size: larger;
+      }
+    }
+  }
+}
