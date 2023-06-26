@@ -3,6 +3,8 @@ import { Route, Routes, Navigate } from "react-router-dom";
 
 // Page components
 import Home from "./Home/Home";
+import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
 import BlogListLatest from "../components/BlogList/BlogListLatest";
 import BlogListTop from "../components/BlogList/BlogListTop";
 import Listings from "./Listings/Listings";
@@ -53,6 +55,8 @@ const Router = () => {
         <Route path="latest" element={<BlogListLatest />} />
         <Route path="top" element={<BlogListTop />} />
       </Route>
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
       <Route path="/listings/*" element={<Listings />}>
         {listingCategoryMap}
       </Route>
