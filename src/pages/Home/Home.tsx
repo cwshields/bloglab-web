@@ -27,7 +27,7 @@ const Home = () => {
       <div className="listings-wrap">
         <div className="listings-header-wrap">
           <h3 className="header">Listings</h3>
-          <Link to="/listings/newest" className="green-text">
+          <Link to="/listings/all" className="green-text">
             See all
           </Link>
         </div>
