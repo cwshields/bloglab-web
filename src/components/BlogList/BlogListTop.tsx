@@ -1,5 +1,5 @@
 import Blog from "../../types/Blog";
-import { blogs } from "../../data/blogs";
+import blogs from "../../data/blogs";
 import BlogCard from "../../pages/BlogCard/BlogCard";
 import FadeIn from "react-fade-in";
 
