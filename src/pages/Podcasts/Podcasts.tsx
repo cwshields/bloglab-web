@@ -6,6 +6,8 @@ import "../../sass/Podcasts.scss";
 import "../../sass/App.scss";
 import FadeIn from "react-fade-in/lib/FadeIn";
 import { PodcastList, podcastList } from "../../data/podcastList";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Podcasts() {
   const podcastListMap = podcastList.map(
@@ -14,7 +16,12 @@ export default function Podcasts() {
         <div key={index} className="podcast-list-card-wrap">
           <Link to="/#">
             <div className="podcast-list-card">
-              <img src={podcast.avatar} alt={podcast.name} />
+              <LazyLoadImage
+                className="image-lazyload"
+                effect="blur"
+                alt={podcast.name}
+                src={podcast.avatar}
+              />
               <h5 className="name overflow-ellipsis">{podcast.name}</h5>
             </div>
           </Link>
@@ -22,15 +29,21 @@ export default function Podcasts() {
       );
     }
   );
+
+  // const getRandomInt = (max: number) => {
+  //   return Math.floor(Math.random() * max).toString();
+  // };
+
   const podcastListSorted = podcastListMap.sort(function (a, b) {
-    const aSort = a.props.children.props.children.props.children[1].props.children
-    const bSort = b.props.children.props.children.props.children[1].props.children
+    const aSort =
+      a.props.children.props.children.props.children[1].props.children;
+    const bSort =
+      b.props.children.props.children.props.children[1].props.children;
     return aSort.localeCompare(bSort);
   });
 
   return (
-    <div className="container">
-      <SideNav />
+    <>
       <Outlet />
       <div className="podcast-wrap">
         <h2>Podcasts</h2>
@@ -41,7 +54,13 @@ export default function Podcasts() {
               .map((podcast: Podcast, index: number) => {
                 return (
                   <Link to={podcast.name} className="podcast-card" key={index}>
-                    <img src={podcast.avatar} alt={podcast.name} />
+                    <div className="image-lazyload">
+                      <LazyLoadImage
+                        effect="blur"
+                        alt={podcast.name}
+                        src={podcast.avatar}
+                      />
+                    </div>
                     <div className="text-wrap">
                       <h5>{podcast.episodes[0].name}</h5>
                     </div>
@@ -54,30 +73,35 @@ export default function Podcasts() {
           <div className="featured-wrap">
             <div className="featured-card">
               <Link to="/#">
-                <img
-                  className="featured-show"
-                  src="https://picsum.photos/id/36/350/350"
-                  alt="Featured Podcast"
-                />
+                <div className="image-lazyload">
+                  <LazyLoadImage
+                    className="featured-show"
+                    effect="blur"
+                    alt="Featured Podcast"
+                    src={`https://picsum.photos/id/203/350/350`}
+                  />
+                </div>
                 <h5>Lorem ipsum dolor sit amet</h5>
               </Link>
             </div>
             <div className="featured-card">
               <Link to="/#">
-                <img
+                <LazyLoadImage
                   className="featured-show"
-                  src="https://picsum.photos/id/83/350/350"
+                  effect="blur"
                   alt="Featured Podcast"
+                  src={`https://picsum.photos/id/201/350/350`}
                 />
                 <h5>Numquam praesentium</h5>
               </Link>
             </div>
             <div className="featured-card">
               <Link to="/#">
-                <img
+                <LazyLoadImage
                   className="featured-show"
-                  src="https://picsum.photos/id/25/350/350"
+                  effect="blur"
                   alt="Featured Podcast"
+                  src={`https://picsum.photos/id/202/350/350`}
                 />
                 <h5>Itaque aperiam delectus</h5>
               </Link>
@@ -87,6 +111,6 @@ export default function Podcasts() {
           <div>{podcastListSorted}</div>
         </FadeIn>
       </div>
-    </div>
+    </>
   );
 }
