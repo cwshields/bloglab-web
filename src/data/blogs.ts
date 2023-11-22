@@ -1,6 +1,6 @@
 import Blog from "../types/Blog";
 
-export const blogs: Array<Blog> = [
+const blogs: Array<Blog> = [
   {
     id: 1,
     title:
@@ -47,4 +47,4 @@ export const blogs: Array<Blog> = [
   },
 ];
 
-
+export default blogs;
