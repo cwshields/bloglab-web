@@ -1,305 +1,287 @@
-import SideNav from "../../components/SideNav/SideNav";
+import FadeIn from "react-fade-in";
 
 export default function Privacy() {
   return (
-    <div className="container">
-      <SideNav />
+    <FadeIn delay={100}>
       <div className="jumbotron">
-        <h2>
-          Privacy Policy
-        </h2>
-        <p>Effective Dec 20, 2018</p>
-        <p>This policy covers DEV Community.</p>
-        <h3> What information DEV Community collects and Why </h3>
+        <h2>Privacy Policy</h2>
+        <p>Effective Dec 20, 2022</p>
+        <p>Earum facere quibusdam! Ipsam laboriosam.</p>
+        <h3>Lumque corrupti accusantium corporis quo neque</h3>
         <p>
-          In order to give you the best possible experience using DEV Community,
-          we collect information from your interactions with our network. We use
-          common internet technologies, such as cookies and web server logs. We
-          collect this basic information from everybody, whether they have an
-          account or not.
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur
+          labore quos amet ab exercitationem voluptas omnis asperiores tempore,
+          neque ad vel porro, fuga pariatur. Omnis recusandae blanditiis vel
+          officia suscipit, impedit dicta aperiam minima deserunt reiciendis.
         </p>
-        <p>
-          The information we collect about all visitors to our website includes:
-        </p>
+        <p>Eserunt in quaerat corrupti eos quibusdam illum vel accusamus:</p>
         <ul>
-          <li>The visitor's browser type</li>
-          <li>Referring site</li>
-          <li>The date and time of each visitor request</li>
+          <li>Laboriosam velit ducimus aut modi</li>
+          <li>Cupiditate debitis</li>
+          <li>Velit ducimus aut modi sint aliquam labore</li>
           <li>
-            We also collect potentially personally-identifying information like
-            Internet Protocol (IP) addresses.
+            Tenetur quos amet ab exercitationem voluptas omnis asperiores
+            tempore, neque ad vel porro, fuga pariatur.
           </li>
         </ul>
-        <p>We use this information to:</p>
+        <p>Omnis recusandae vel officia suscipit:</p>
         <ul>
           <li>
-            Provide, test, improve, promote and personalize DEV Community
-            Services
+            blanditiis voluptatum laboriosam sint praesentium natus ex culpa
+            aspernatur
           </li>
-          <li>Fight spam and other forms of abuse</li>
+          <li>Iusto quos, voluptate similique animi perferendis</li>
           <li>
-            Generate aggregate, non-identifying information about how people use
-            DEV Community Services
+            voluptates beatae modi doloribus temporibus vel iure optio et sunt
+            asperiores
           </li>
         </ul>
         <p>
-          In order for you to create an account on DEV Community and use our
-          Services, we need to collect and process certain information.
-          Depending on your use of the Services, that may include:
+          Quisquam voluptate similique iste quia vero eos ratione quas
+          praesentium dignissimos natus rerum eaque, temporibus quis nisi
+          nostrum nobis distinctio officia! Ad consequuntur quidem id ducimus,
+          deleniti nihil, porro quibusdam:
         </p>
         <ul>
           <li>
-            Communications you send to us (for example, when you ask for
-            support, send us questions or comments, or report a problem);
+            Et amet voluptas asperiores, ex consequatur delectus dolore quis
+            temporibus voluptatibus quas corporis autem.
           </li>
           <li>
-            Information that you submit on or to DEV Community in the form of
-            reactions, comments, or messages to other users;
+            Ad consequuntur, dolor sit amet consectetur adipisicing elit nostrum
+            sit dignissimos perspiciatis;
           </li>
           <li>
-            The email address associated with your Twitter account, if you
-            choose to sign up using your Twitter credentials. DEV Community will
-            also request permission to access additional information (these
-            permissions are governed by Twitter's privacy policies and can be
-            managed through your Twitter privacy settings). We never post
-            anything to your Twitter without your permission.
+            Amet incidunt quas minus praesentium commodi eaque soluta vitae
+            quaerat labore. Veniam eum, mollitia blanditiis aspernatur unde modi
+            iusto. Sapiente dolorem deleniti assumenda, perspiciatis, provident
+            ex libero, praesentium corporis ducimus et sunt corrupti veritatis
+            quod sed dolor aperiam illo.
           </li>
           <li>
-            The email address associated with your GitHub account, if you choose
-            to sign up using your Github credentials. DEV Community will also
-            request permission to access additional information (these
-            permissions are governed by GitHub's privacy policies and can be
-            managed through your GitHub privacy settings). We never post
-            anything to your GitHub without your permission.
+            In unde corrupti expedita quaerat officiis aperiam accusamus, vero
+            dolor sunt magnam enim accusantium cum animi modi, alias id officia
+            maxime, possimus recusandae quam. Temporibus dolore, blanditiis quo
+            sapiente reiciendis aliquam odio.
           </li>
           <li>
-            You also have the option to give us more information if you want to,
-            and this may include “User Personal Information.”
+            Omnis recusandae blanditiis vel officia suscipit, impedit dicta
+            aperiam minima "deserunt reiciendis".
           </li>
         </ul>
         <h3>Information Disclosure</h3>
         <p>
-          We do not share, sell, rent, or trade User Personal Information with
-          third parties for commercial purposes.
+          Et amet voluptas asperiores, ex consequatur delectus dolore quis
+          temporibus voluptatibus quas corporis.
           <br />
+          Incidunt quas minus praesentium commodi eaque soluta vitae quaerat
+          labore. Veniam eum, mollitia blanditiis aspernatur unde modi iusto.
+          Sapiente dolorem deleniti assumenda, perspiciatis, provident ex
+          libero, praesentium corporis ducimus et sunt corrupti veritatis quod
+          sed dolor aperiam illo.
           <br />
-          We do share certain aggregated, non-personally identifying information
-          with others about how our users, collectively, use DEV Community. For
-          example, we may share information pertaining to the popularity of
-          different programming languages for advertising partners.
+          Corrupti expedita quaerat officiis aperiam accusamus, vero dolor sunt
+          magnam enim accusantium cum animi modi, alias id officia maxime,
+          possimus recusandae quam. Temporibus dolore, blanditiis quo sapiente
+          reiciendis odio.
           <br />
+          Omnis recusandae blanditiis vel officia suscipit, impedit dicta
+          aperiam minima "deserunt reiciendis".
           <br />
-          We do host first-party advertising on DEV Community. We do not run any
-          code from advertisers and all ad images are hosted on managed DEV
-          Community servers. For more details, see our section on Advertising
-          Details.
-          <br />
-          <br />
-          We may use User Personal Information with your permission, so we can
-          perform services you have authorized.
-          <br />
-          <br />
-          We may share User Personal Information with a limited number of third
-          party vendors who process it on our behalf to provide or improve our
-          service, and who have agreed to privacy restrictions similar to our
-          own Privacy Statement. Our third party vendors are listed below.
+          Unde corrupti expedita quaerat officiis aperiam accusamus, vero dolor
+          sunt magnam enim accusantium cum animi modi, alias id officia maxime,
+          possimus recusandae quam. Temporibus dolore, blanditiis quo sapiente
+          reiciendis aliquam odio.
         </p>
-        <h3>Advertising Details</h3>
-        <p>We target advertisements based solely upon:</p>
+        <h3>Temporibus Dolore</h3>
+        <p>praesentium corporis ducimus et sunt corrupti:</p>
         <ul>
           <li>
-            Details of the page where the advertisement is shown, including:
+            Vero dolor sunt magnam enim accusantium cum animi modi:
             <ul>
               <li>
-                The name and keywords associated with the page or article being
-                viewed
+                Temporibus dolore blanditiis quo sapiente reiciendis aliquam
+                odio.
                 <ul>
                   <li>
-                    We allow advertisers to target ads to a list of keywords
-                    advertising.
+                    Corporis ducimus et sunt corrupti veritatis quod sed dolor
+                    aperiam illo.
                   </li>
                 </ul>
               </li>
             </ul>
           </li>
         </ul>
-        <p>We may place ads in:</p>
+        <p>Acctium cum anmi modi:</p>
         <ul>
-          <li>Sidebars</li>
-          <li>Below articles</li>
-          <li>On search result pages</li>
-          <li>On tag pages</li>
+          <li>Corrupti</li>
+          <li>Veritatis quod</li>
+          <li>Sunt corri veritatis quod</li>
+          <li>Et sunt alias animi</li>
         </ul>
         <p>
-          All registered members have the ability to disable advertisements —
-          where reasonable — through their Settings page. For instance, it's not
-          feasible to disable certain advertisements in the form of recognition
-          posts, site-wide contests, dedicated sponsorship page, etc.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi
+          aperiam, magnam dignissimos - atque natus deserunt voluptas. Totam
+          cupiditate cumque aut blanditiis. Deleniti quo nulla maxime, esse
+          sapiente culpa assumenda consequatur possimus aperiam quis tempore
+          officia accusantium rerum. Et, ratione minus?
         </p>
         <h3>Third Party Vendors</h3>
         <p>
           <strong>
-            We may share your account information with third parties in some
-            circumstances, including:
+            Temporibus dolore, blanditiis quo sapiente reiciendis odio:
           </strong>{" "}
-          (1) with your consent; (2) to a service provider or partner who meets
-          our data protection standards; (3) for survey or research purposes,
-          after aggregation, anonymization, or pseudonymization; (4) when we
-          have a good faith belief it is required by law, such as pursuant to a
-          subpoena or other legal process; (5) when we have a good faith belief
-          that doing so will help prevent imminent harm to someone.
+          (1) Lorem ipsum dolor sit; (2) amet consectetur adipisicing elit. Et
+          praesentium sapiente, esse beatae; (3) Quae laborum, tempore nisi
+          blanditiis in error eos aut repellendus qui adipisci; (4) corrupti
+          obcaecati ipsam sapiente provident, accusantium nihil, molestias harum
+          inventore aspernatur aliquam cumque; (5) deleniti amet Nihil deserunt
+          ratione nulla ipsam odio exercitationem dolor.
         </p>
         <p>
-          <strong>Data Storage</strong>
+          <strong>Nihil Deserunt</strong>
           <br />
-          DEV Community uses third-party vendors and hosting partners for
-          hardware, software, networking, storage, and related technology we
-          need to run DEV Community. By using DEV Community Services, you
-          authorize DEV Community to transfer, store, and use your information
-          in the United States and any other country where we operate. All
-          service providers and third-party vendors are required to meet our
-          data protection standards.
+          Corporis, at Voluptas veniam placeat delectus sunt amet! Cum nam
+          tenetur delectus et inventore, maiores impedit iusto optio ad. Impedit
+          illo adipisci tenetur aliquam. Vitae facere natus praesentium at. In
+          nisi itaque omnis magni. Ullam assumenda perferendis voluptates iure
+          quaerat illo. Minus quos tenetur saepe reprehenderit fugiat, quia modi
+          pariatur asperiores sed.
         </p>
         <p>
-          <strong>Site monitoring</strong>
+          <strong>Nobis Voluptatem</strong>
           <br />
-          DEV Community uses a variety of third-party services to diagnose
-          errors and improve the performance of our site. We aim to minimize the
-          amount of personal information shared, but the information may include
-          your IP address or other identifying information. All service
-          providers and third-party vendors are required to meet our data
-          protection standards.
+          Quidem sed quam explicabo facere consequatur libero. Sint, corporis
+          nihil doloremque, aliquid officiis nobis voluptatem praesentium
+          tempore mollitia, quidem qui suscipit ratione sed numquam expedita
+          laboriosam quia? Itaque sapiente possimus voluptates repellendus
+          quibusdam deserunt dolores facilis assumenda ab, ullam, iste labore
+          molestias sint iure sit repellat debitis! Provident doloremque illo
+          aliquid quibusdam sapiente deleniti quidem. Assumenda, nam.
         </p>
         <p>
-          <strong>Payment processing</strong>
+          <strong>Ullam Assumenda</strong>
           <br />
-          DEV Community does not process payments directly — we rely on
-          third-party services such as Stripe, Shopify, and Paypal to receive
-          payments and store any payment information.
+          Dolores facilis assumenda ab ullam, iste labore molestias sint iure
+          sit repellat debitis! Provident doloremque illo aliquid quibusdam
+          sapiente deleniti quidem. Assumenda, nam.
         </p>
         <p>
-          <strong>Third-Party Embeds</strong>
+          <strong>Vitae-facere Natus</strong>
           <br />
-          Some of the content that you see displayed on DEV Community is not
-          hosted by DEV Community. These “embeds” are hosted by a third-party
-          and embedded in DEV Community. For example: YouTube videos, Codepens,
-          Twitter tweets, or GitHub code that appear within a DEV Community
-          post. These files send data to the hosted site just as if you were
-          visiting that site directly (for example, when you load a DEV
-          Community post page with a YouTube video embedded in it, YouTube
-          receives data about your activity). DEV Community does not control
-          what data third parties collect in cases like this, or what they will
-          do with it. Third-party embeds on DEV Community are not covered by
-          this privacy policy; they are covered by the privacy policy of the
-          third-party service. Be mindful when interacting with these services.
+          Harum natus voluptate veritatis inventore, quo ipsum minima dolore
+          ratione a modi rerum. Laborum sit, reiciendis maxime dolorem aliquam
+          fuga doloribus! Sunt ex recusandae repellat quasi sed libero vel,
+          voluptas tempora aut ea quia saepe placeat in dicta eligendi inventore
+          odio, ducimus vero accusamus nemo (Distinctio omnis quibusdam ullam.
+          Voluptatem sunt maiores, aut error quidem pariatur ipsum eveniet
+          delectus molestias saepe quis vel sapiente) soluta deleniti
+          doloremque. Dolores ratione odit quae fuga eos debitis minima.
+          Voluptatibus corrupti animi fugiat officiis numquam, quaerat placeat
+          rem iusto magnam reprehenderit modi. Recusandae voluptatem nihil
+          repellat.
         </p>
         <p>
-          <strong>Tracking &amp; Cookies</strong>
+          <strong>Tempora &amp; Consequatur</strong>
           <br />
-          We use browser cookies and similar technologies to recognize you when
-          you return to our Services. Third-party vendors may also use cookies
-          for various reasons.
+          Voluptas veniam placeat delectus sunt amet. Cum nam tenetur delectus
+          et inventore, maiores impedit iusto optio ad. Impedit illo adipisci
+          tenetur aliquam.
           <br />
+          Blanditiis consequatur enim fugiat quaerat quis nobis placeat sit.
+          Cupiditate officia, ("Eos laboriosam rem"), nihil sunt fugiat
+          distinctio quod optio, inventore itaque. Debitis, quod? Vero molestiae
+          excepturi beatae tempore non nihil praesentium consequatur error
+          tempora iste cupiditate iure, facere dolor incidunt nobis molestias
+          quas explicabo est modi reprehenderit omnis voluptatibus quam optio.
+          Vero, adipisci quaerat at cum quos ab necessitatibus laboriosam unde
+          eius repellat voluptatem alias obcaecati laborum quam numquam
+          praesentium nemo sed minima sunt impedit beatae. Fuga ad, amet
+          provident incidunt dolore eius vel ducimus sit. Voluptatem laboriosam
+          sequi laborum labore eius. Consequuntur autem eius ab, quam
+          voluptatibus suscipit excepturi voluptatum nisi, nostrum rem ipsa
+          officia, amet adipisci dolores perspiciatis nulla.
           <br />
-          DEV Community uses a specific cookie in order to facilitate the use of
-          Google Universal Analytics for users logged-in to the Applications or
-          the Platforms (“Logged-In User). If you are a Logged-In User, DEV
-          Community may use your DEV Community user ID in combination with
-          Google Universal Analytics and Google Analytics to track and analyze
-          the pages of the Services you visit. We do this only to better
-          understand how you use the Website and the other Services, with a view
-          to offering improvements for all DEV Community users; and to tailor
-          our business and marketing activities accordingly, both generally and
-          specifically to you. Google Analytics cookies do not provide DEV
-          Community with any Personal Information.You can prevent Google
-          Analytics from recognizing you on return visits to this site by
-          disabling cookies on your browser.
-          <br />
-          <br />
-          You may opt-out of this feature by installing the Google Analytics
-          Opt-out Browser Add-on, by setting your web browser to refuse cookies,
-          or by setting your browser to alert you when cookies are being sent.
-          If you do so, note that some parts of the Site may not function
-          properly.
+          Quas explicabo est modi reprehenderit omnis voluptatibus quam optio.
+          Vero, adipisci quaerat at cum quos ab necessitatibus laboriosam unde
+          eius repellat voluptatem alias obcaecati laborum quam numquam
+          praesentium nemo sed minima sunt impedit beatae. Fuga ad, amet
+          provident incidunt dolore eius vel ducimus sit.
         </p>
         <p>
-          <strong>Data Security</strong>
+          <strong>Amet Adipisci</strong>
           <br />
-          We use encryption (HTTPS/TLS) to protect data transmitted to and from
-          our site. However, no data transmission over the Internet is 100%
-          secure, so we can't guarantee security. You use the Service at your
-          own risk, and you're responsible for taking reasonable measures to
-          secure your account.
+          Debitis, quod Vero (molestiae excepturi beatae) tempore non nihil
+          praesentium consequatur error tempora iste cupiditate iure, facere
+          dolor incidunt nobis molestias quas explicabo est modi reprehenderit
+          omnis voluptatibus quam optio.
         </p>
         <p>
-          <strong>Administrative Emails from DEV Community</strong>
+          <strong>Voluptatem alias obcaecati laborum quam</strong>
           <br />
-          Sometimes we'll send you emails about your account, service changes or
-          new policies. You can't opt out of this type of “transactional” email
-          (unless you delete your account).
+          Praesentium consequatur error tempora iste cupiditate iure, facere
+          dolor incidunt nobis molestias quas explicabo est modi reprehenderit
+          (nobis molestias quas explicabo).
           <br />
-          <br />
-          When you interact with a transactional email sent from DEV Community
-          (such as opening an email or clicking on a particular link in an
-          email), we may receive information about that interaction.
+          Consequuntur autem eius ab, quam dolore voluptatibus Nulla error
+          tempore ex veniam alias, (officiis architecto obcaecati aperiam dicta
+          ratione facilis labore delectus) explicabo at corporis quo?
+          Consequuntur, perferendis.
         </p>
         <p>
-          <strong>Non-administrative Emails from DEV Community</strong>
+          <strong>voluptatem alias quam numquam BlogLab Community</strong>
           <br />
-          Upon creating a DEV Community account, you will be opted into the DEV
-          Community Newsletter and other non-administrative email. Your email
-          address and user profile information may be stored by a third-party
-          email provider such as MailChimp or Sendgrid. You can opt out of
-          non-administrative emails such as digests, newsletters, and activity
-          notifications through your account's “Settings” page and at the link
-          of the footer in any non-administrative email you receive from us.
+          Adipisci quaerat at cum quos ab necessitatibus laboriosam unde eius
+          repellat voluptatem alias obcaecati laborum quam numquam nisi
+          praesentium nemo sed minima sunt impedit beatae. Fuga ad, amet nemo
+          provident incidunt dolore eius vel ducimus sit. Voluptatem laboriosam
+          sequi laborum labore eius. Consequuntur autem eius ab, quam dolore
+          voluptatibus suscipit excepturi voluptatum nisi incidunt dolore.
           <br />
-          <br />
-          When you interact with a non-administrative email sent from DEV
-          Community (such as opening an email or clicking on a particular link
-          in an email), we may receive information about that interaction.
+          Voluptatem laboriosam sequi laborum labore eius voluptatum nisi
+          incidunt (repellat voluptatem alias obcaecati laborum quam numquam
+          nisi sed minima), vel praesentium nemo sed minima sunt impedit.
         </p>
         <p>
-          <strong>Deleting Your Personal Information</strong>
+          <strong>Praesentium Nemo Sed Minima Impedit</strong>
           <br />
-          You may request deletion of your personal information and account by
-          emailing <a href="mailto:hr@email.com">hr@email.com</a>.
+          Sunt impedit, amet nemo provident incidunt dolore eius vel ducimus sit
+          ducimus <a href="mailto:hr@email.com">hr@email.com</a>.
           <br />
-          <br />
-          To protect information from accidental or malicious destruction, we
-          may maintain residual copies for a brief time period. But, if you
-          delete your account, your information and content will be
-          unrecoverable after that time.
+          Fuga ad, amet nemo provident incidunt dolore eius vel ducimus sit.
+          Voluptatem laboriosam sequi laborum labore eius. Consequuntur autem
+          eius ab, quam dolore voluptatibus suscipit excepturi voluptatum nisi
+          incidunt dolore.
         </p>
         <p>
-          <strong>Data Portability</strong>
+          <strong>Sequi Voluptatem</strong>
           <br />
-          If you would like to request a copy of your user data, please email{" "}
-          <a href="mailto:hr@email.com">hr@email.com</a>.
+          Consequuntur autem eius ab, quam dolore voluptatibus suscipit
+          excepturi voluptatum <a href="mailto:hr@email.com">hr@email.com</a>.
         </p>
         <p>
-          <strong>Business Transfers</strong>
+          <strong>Dolore Voluptatibus</strong>
           <br />
-          If we are involved in a merger, acquisition, bankruptcy,
-          reorganization or sale of assets such that your information would be
-          transferred or become subject to a different privacy policy, we'll
-          notify you in advance of any such change.
+          Vero, adipisci quaerat at cum quos ab necessitatibus laboriosam unde
+          eius repellat voluptatem alias obcaecati laborum quam numquam
+          praesentium nemo sed minima quos impedit beatae. Fuga ad, amet
+          provident incidunt dolore eius vel sunt.
         </p>
         <p>
-          <strong>Changes to this Policy</strong>
+          <strong>Tempore Ex Quam Veniam</strong>
           <br />
-          We reserve the right to revise this Privacy Policy at any time. If we
-          change this Privacy Policy in the future, we will post the revised
-          Privacy Policy and update the “Effective Date,” above, to reflect the
-          date of the changes.
+          Consequuntur autem eius ab, quam dolore voluptatibus Nulla error
+          tempore ex veniam, alias, officiis architecto obcaecati aperiam dicta
+          ratione facilis labore delectus explicabo at corporis quo?
+          Consequuntur, perferendis.
         </p>
         <p>
-          <strong>Questions</strong>
+          <strong>Adipisicing</strong>
           <br />
-          We welcome feedback about this policy at{" "}
+          Consequuntur autem eius ab voluptatibus suscipit{" "}
           <a href="mailto:hr@email.com">hr@email.com</a>.
         </p>
       </div>
-    </div>
+    </FadeIn>
   );
 }

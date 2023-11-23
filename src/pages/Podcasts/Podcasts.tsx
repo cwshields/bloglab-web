@@ -1,4 +1,3 @@
-import SideNav from "../../components/SideNav/SideNav";
 import { Link, Outlet } from "react-router-dom";
 import Podcast from "../../types/Podcast";
 import podcasts from "../../data/podcasts";

@@ -1,4 +1,3 @@
-import SideNav from "../../components/SideNav/SideNav";
 import TagCard from "../../components/TagList/TagCard";
 import tags from "../../data/tags";
 import Tag from "../../types/Tag";
@@ -9,10 +8,9 @@ export default function Tags() {
   //   .replace(/\/$/, "")
   //   .split("/")
   //   .splice(-1, 1);
-  
+
   return (
-    <div className="container">
-      <SideNav />
+    <>
       <div className="tag-list-wrap">
         <div className="tag-list-header">
           <h2>Tag List</h2>
@@ -49,6 +47,6 @@ export default function Tags() {
           </div>
         </FadeIn>
       </div>
-    </div>
+    </>
   );
 }

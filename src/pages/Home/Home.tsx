@@ -5,14 +5,12 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ListingTab from "../../components/Listing/ListingTab";
 import Listing from "../../types/Listing";
-import SideNav from "../../components/SideNav/SideNav";
 import FadeIn from "react-fade-in";
 import { Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="container">
-      <SideNav />
+    <>
       <div className="blog-list">
         <div className="category">
           <Link className="link" to="/home/latest">
@@ -49,7 +47,7 @@ const Home = () => {
           </Button>
         </FadeIn>
       </div>
-    </div>
+    </>
   );
 };
 

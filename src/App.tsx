@@ -2,7 +2,8 @@ import "./sass/App.scss";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./pages/router";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import SideNav from "./components/SideNav/SideNav";
 
 export default function App() {
   useEffect(() => {
@@ -13,7 +14,10 @@ export default function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        <Router />
+        <div className="container">
+          <SideNav />
+          <Router />
+        </div>
       </BrowserRouter>
     </>
   );

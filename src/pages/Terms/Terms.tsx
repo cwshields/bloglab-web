@@ -1,17 +1,14 @@
-import SideNav from "../../components/SideNav/SideNav";
+import FadeIn from "react-fade-in";
 
 export default function Terms() {
   return (
-    <div className="container">
-      <SideNav />
+    <FadeIn delay={100}>
       <div className="jumbotron">
-        <h2>
-          Web Site Terms and Conditions of Use
-        </h2>
+        <h2>Web Site Terms and Conditions of Use</h2>
         <h3 id="terms-text">1. Terms</h3>
         <p>
           By accessing this web site, you are agreeing to be bound by these web
-          site Terms and Conditions of Use, our
+          site Terms and Conditions of Use, our{" "}
           <a href="https://dev.to/privacy">Privacy Policy</a>, all applicable
           laws and regulations, and agree that you are responsible for
           compliance with any applicable local laws. If you do not agree with
@@ -211,6 +208,6 @@ export default function Terms() {
 
         <p>General Terms and Conditions applicable to Use of a Web Site.</p>
       </div>
-    </div>
+    </FadeIn>
   );
 }
