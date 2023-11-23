@@ -11,9 +11,10 @@
     }
   }
   .link:hover {
-    background-color: #00db6691;
+    background-color: #00ea6d91;
     border-radius: 6px;
     color: #111111;
+    transition: 50ms;
   }
   .other {
     font-size: 18px;

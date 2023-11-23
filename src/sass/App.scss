@@ -6,6 +6,14 @@ html {
   overflow-y: scroll;
 }
 
+a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+a:hover {
+  color: #f2f2f2;
+}
+
 .display-center {
   display: flex;
   justify-content: center;
@@ -15,6 +23,10 @@ code {
   background-color: #002961;
   border-radius: 5px;
   padding: 3px 6px;
+}
+
+.bloglab-card:hover {
+  background-color: #003072 !important;
 }
 
 .jumbotron {
