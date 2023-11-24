@@ -1,13 +1,14 @@
 import Blog from "../../types/Blog";
-import blogs from "../../data/blogs";
+import { useGetBlogData } from "../../data/bloglabDataHooks";
 import BlogCard from "../../pages/BlogCard/BlogCard";
 import FadeIn from "react-fade-in";
 
 export default function BlogListLatest() {
+  const { blogsData, blogsLoading, blogsError } = useGetBlogData();
   return (
     <>
       <FadeIn delay={100}>
-        {blogs.map((blog: Blog, index: number) => (
+        {blogsData?.map((blog: Blog, index: number) => (
           <BlogCard
             id={blog.id}
             key={index}

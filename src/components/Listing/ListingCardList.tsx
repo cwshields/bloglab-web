@@ -2,14 +2,12 @@ import { ReactElement } from "react";
 import ListingCard from "./ListingCard";
 import useAxios from "axios-hooks";
 import Listing from "../../types/Listing";
+import { useGetListingData } from "../../data/bloglabDataHooks";
 
 export default function ListingCardList() {
-  const [{ data, loading, error } /*, refetch*/] = useAxios({
-    method: "GET",
-    url: "https://zea1btt963.execute-api.eu-west-1.amazonaws.com/dev/get-listings",
-  });
+  const { listingData, listingLoading, listingError } = useGetListingData();
 
-  const listingData: Array<ReactElement> = data?.listings.map(
+  const listingDataEl: Array<ReactElement> = listingData?.map(
     (listing: Listing, index: number) => (
       <ListingCard
         id={listing.id}
@@ -23,23 +21,23 @@ export default function ListingCardList() {
       />
     )
   );
-
+  
   const classList: string = "listing-wrap ";
-  const classTernary: string | null = loading ? "display-center" : null;
+  const classTernary: string | null = listingLoading ? "display-center" : null;
 
   return (
     <div className={classList + classTernary}>
-      {loading ? (
+      {listingLoading ? (
         <img src="https://www.onwebchat.com/img/spinner.gif" alt="Loading..." />
       ) : (
-        listingData.sort((a: ReactElement, b: ReactElement) =>
+        listingDataEl.sort((a: ReactElement, b: ReactElement) =>
           b.props.date
             .split("/")
             .join()
             .localeCompare(a.props.date.split("/").join())
         )
       )}
-      {error && <div>Error: couldn't load blogs</div>}
+      {listingError && <div>Error: couldn't load listings</div>}
     </div>
   );
 }

@@ -26,7 +26,7 @@ import Blog from "./Blog/Blog";
 // Data
 // TODO: Replace with axios calls
 import tags from "../data/tags";
-import { useGetBlogData } from "../data/blogs";
+import { useGetBlogData } from "../data/bloglabDataHooks";
 import listingCategories from "../data/listingCategories";
 
 // Types
@@ -35,7 +35,7 @@ import BlogType from "../types/Blog";
 
 const Router = () => {
   
-  const { blogsData, blogsloading, blogsError } = useGetBlogData();
+  const { blogsData } = useGetBlogData();
 
   const tagArrayFilter = (arg: string) =>
     tags.filter((tag) => tag.name === arg);
@@ -58,7 +58,7 @@ const Router = () => {
     }
   );
 
-  const blogRoutes = blogsData?.blogs.map((blog: BlogType, index: number) => {
+  const blogRoutes = blogsData?.map((blog: BlogType, index: number) => {
     return (
       <Route
         key={index}
