@@ -1,11 +1,11 @@
 import { ReactElement } from "react";
 import FadeIn from "react-fade-in";
-import { useGetBlogData } from "../../data/bloglabDataHooks";
+import { useGetData } from "../../data/bloglabDataHooks";
 import Blog from "../../types/Blog";
 import BlogCard from "../../pages/BlogCard/BlogCard";
 
 export default function BlogListLatest() {
-  const { blogsData, blogsLoading, blogsError } = useGetBlogData();
+  const [ blogsData, blogsLoading, blogsError ] = useGetData("blogs");
 
   const blogDataEl: Array<ReactElement> = blogsData?.map(
     (blog: Blog, index: number) => (

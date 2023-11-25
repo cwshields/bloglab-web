@@ -25,7 +25,7 @@ import Blog from "./Blog/Blog";
 // Data
 // TODO: Replace with axios calls
 import tags from "../data/tags";
-import { useGetBlogData } from "../data/bloglabDataHooks";
+import { useGetData } from "../data/bloglabDataHooks";
 import listingCategories from "../data/listingCategories";
 
 // Types
@@ -33,7 +33,7 @@ import TagType from "../types/Tag";
 import BlogType from "../types/Blog";
 
 const Router = () => {
-  const { blogsData } = useGetBlogData();
+  const [ blogsData ] = useGetData("blogs");
 
   const tagArrayFilter = (arg: string) =>
     tags.filter((tag) => tag.name === arg);

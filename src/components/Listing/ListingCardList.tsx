@@ -1,10 +1,10 @@
 import { ReactElement } from "react";
 import ListingCard from "./ListingCard";
 import Listing from "../../types/Listing";
-import { useGetListingData } from "../../data/bloglabDataHooks";
+import { useGetData } from "../../data/bloglabDataHooks";
 
 export default function ListingCardList() {
-  const { listingData, listingLoading, listingError } = useGetListingData();
+  const [ listingData, listingLoading, listingError ] = useGetData("listings");
 
   const listingDataEl: Array<ReactElement> = listingData?.map(
     (listing: Listing, index: number) => (
