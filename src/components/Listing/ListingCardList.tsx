@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import ListingCard from "./ListingCard";
-import useAxios from "axios-hooks";
 import Listing from "../../types/Listing";
 import { useGetListingData } from "../../data/bloglabDataHooks";
 
@@ -21,7 +20,7 @@ export default function ListingCardList() {
       />
     )
   );
-  
+
   const classList: string = "listing-wrap ";
   const classTernary: string | null = listingLoading ? "display-center" : null;
 

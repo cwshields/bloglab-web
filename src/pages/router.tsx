@@ -1,6 +1,5 @@
 // Dependencies
 import { Route, Routes, Navigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 
 // Page components
 import Home from "./Home/Home";
@@ -34,7 +33,6 @@ import TagType from "../types/Tag";
 import BlogType from "../types/Blog";
 
 const Router = () => {
-  
   const { blogsData } = useGetBlogData();
 
   const tagArrayFilter = (arg: string) =>
