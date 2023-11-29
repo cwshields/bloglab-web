@@ -16,31 +16,25 @@ export default function TagCard(props: Tag) {
 
   return (
     <div className="display-inline-wrap">
-      <Link to={linkURL} className={tagClass + tagColor}>
-        <h4>
-          <span className={tagTextColor}>#</span>
-          {name}
-        </h4>
+      <div className={tagClass + tagColor}>
+        <Link to={linkURL}>
+          <h4>
+            <span className={tagTextColor}>#</span>
+            {name}
+          </h4>
+        </Link>
         <p>{description}</p>
         <div className="footer-wrap">
-          {follow ? (
-            <Button
-              variant="outline-light"
-              onClick={() => setFollow((current) => !current)}
-            >
-              Following
-            </Button>
-          ) : (
-            <Button
-              variant="primary"
-              onClick={() => setFollow((current) => !current)}
-            >
-              Follow
-            </Button>
-          )}
+          <Button
+            className="bl-button"
+            variant={follow ? "outline-light" : "primary"}
+            onClick={() => setFollow((current) => !current)}
+          >
+            {follow ? "Following" : "Follow"}
+          </Button>
           <img className="icon" src={icon} alt="tag icon" />
         </div>
-      </Link>
+      </div>
     </div>
   );
 }

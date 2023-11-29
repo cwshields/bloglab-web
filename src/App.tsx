@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import Router from "./pages/router";
 import { useEffect } from "react";
 import SideNav from "./components/SideNav/SideNav";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   useEffect(() => {
