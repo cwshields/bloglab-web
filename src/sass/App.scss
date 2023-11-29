@@ -26,7 +26,7 @@ code {
 }
 
 .bloglab-card:hover {
-  background-color: #003072 !important;
+  background-color: #003177 !important;
 }
 
 .jumbotron {
@@ -76,8 +76,8 @@ code {
 }
 
 body {
-  background-color: #0a2647;
-  color: #f2f2f2;
+  background-color: #0a2647 !important;
+  color: #f2f2f2 !important;
 }
 
 .bloglab-bg-dark,
@@ -101,6 +101,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .date {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    }
   }
 }
 
