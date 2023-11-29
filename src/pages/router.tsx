@@ -33,7 +33,7 @@ import TagType from "../types/Tag";
 import BlogType from "../types/Blog";
 
 const Router = () => {
-  const [ blogsData ] = useGetData("blogs");
+  const [blogsData] = useGetData("blogs");
 
   const tagArrayFilter = (arg: string) =>
     tags.filter((tag) => tag.name === arg);
@@ -61,18 +61,7 @@ const Router = () => {
       <Route
         key={index}
         path={`${blog.title}`}
-        element={
-          <Blog
-            id={blog.id}
-            key={index}
-            title={blog.title}
-            description={blog.description}
-            readTime={blog.readTime}
-            tags={blog.tags}
-            date={blog.date}
-            user={blog.user}
-          />
-        }
+        element={<Blog key={index} {...blog} />}
       />
     );
   });

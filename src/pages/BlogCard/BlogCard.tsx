@@ -16,9 +16,11 @@ export default function BlogCard(props: Blog) {
   };
 
   return (
-    <Link to={"/blog/" + title}>
+    <>
       <div className="bloglab-card blog-card">
-        <h2 className="title">{title}</h2>
+        <Link to={"/blog/" + title}>
+          <h2 className="title">{title}</h2>
+        </Link>
         <div className="description">{description}</div>
         <div className="tags-wrap">
           <TagList tags={tags} />
@@ -43,6 +45,6 @@ export default function BlogCard(props: Blog) {
           </div>
         </div>
       </div>
-    </Link>
+    </>
   );
 }
