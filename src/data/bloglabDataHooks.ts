@@ -4,15 +4,17 @@ import { AxiosError } from "axios";
 import Listing from "../types/Listing";
 import Podcast from "../types/Podcast";
 
-export const useGetData = <T extends "blogs" | "listings" | "podcasts">(
-  datatype: T
-): T extends "blogs"
+type DataType = "blogs" | "listings" | "podcasts";
+
+type GetDataType<T extends DataType> = T extends "blogs"
   ? [Array<Blog>, boolean, AxiosError<any, any> | null]
   : T extends "listings"
   ? [Array<Listing>, boolean, AxiosError<any, any> | null]
   : T extends "podcasts"
   ? [Array<Podcast>, boolean, AxiosError<any, any> | null]
-  : any[] => {
+  : any[];
+
+export const useGetData = <T extends DataType>(datatype: T): GetDataType<T> => {
   const [{ data, loading, error }] = useGet(
     "https://zea1btt963.execute-api.eu-west-1.amazonaws.com/dev/get-" + datatype
   );
