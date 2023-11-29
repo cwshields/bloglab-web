@@ -3,7 +3,7 @@ import moment from "moment";
 import "../../sass/BlogCard.scss";
 
 export default function Blog(props: BlogType) {
-  const { title, description, user, date, readTime, tags, banner } = props;
+  const { title, description, user, date } = props;
 
   return (
     <div className="blog-wrap">
