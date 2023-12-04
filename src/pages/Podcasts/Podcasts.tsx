@@ -2,25 +2,27 @@ import { Link, Outlet } from "react-router-dom";
 import Podcast from "../../types/Podcast";
 import podcasts from "../../data/podcasts";
 import "../../sass/Podcasts.scss";
-import "../../sass/App.scss";
 import FadeIn from "react-fade-in/lib/FadeIn";
-import { PodcastList, podcastList } from "../../data/podcastList";
+import { PodcastList, generatePodcastList } from "../../data/podcastList";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Podcasts() {
-  const podcastListMap = podcastList.map(
+  const podcastsList = generatePodcastList(100)
+  const podcastListMap = podcastsList.map(
     (podcast: PodcastList, index: number) => {
       return (
         <div key={index} className="podcast-list-card-wrap">
           <Link to="/#">
             <div className="podcast-list-card">
-              <LazyLoadImage
-                className="image-lazyload"
-                effect="blur"
-                alt={podcast.name}
-                src={podcast.avatar}
-              />
+              <div className="img-wrap">
+                <LazyLoadImage
+                  className="image-lazyload"
+                  effect="blur"
+                  alt={podcast.name}
+                  src={podcast.avatar}
+                />
+              </div>
               <h5 className="name overflow-ellipsis">{podcast.name}</h5>
             </div>
           </Link>
@@ -77,7 +79,7 @@ export default function Podcasts() {
                     className="featured-show"
                     effect="blur"
                     alt="Featured Podcast"
-                    src={`https://picsum.photos/id/203/350/350`}
+                    src={`https://picsum.photos/id/2/350/350`}
                   />
                 </div>
                 <h5>Lorem ipsum dolor sit amet</h5>
@@ -89,7 +91,7 @@ export default function Podcasts() {
                   className="featured-show"
                   effect="blur"
                   alt="Featured Podcast"
-                  src={`https://picsum.photos/id/201/350/350`}
+                  src={`https://picsum.photos/id/96/350/350`}
                 />
                 <h5>Numquam praesentium</h5>
               </Link>
