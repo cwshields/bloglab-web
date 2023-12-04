@@ -25,19 +25,20 @@
       width: 200px;
     }
     form {
-      width: 300px; 
+      width: 300px;
     }
   }
   .tag-card-wrap {
     margin: -6px -6px 10px;
-    a {
-      text-decoration: none;
-      color: #f2f2f2;
-    }
-    a:hover {
-      background-color: #003073;
-    }
     .tag-card {
+      a {
+        color: #f2f2f2;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #f2f2f2;
+        text-decoration: underline;
+      }
       display: block;
       border-radius: 10px;
       background-color: #00337c;

@@ -68,10 +68,18 @@
       display: flex;
       align-items: center;
       margin: 4px;
-      img {
+      .img-wrap {
         margin-right: 10px;
         border-radius: 6px;
         border: 1px solid #0045a570;
+        span {
+          img {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border-radius: 6px;
+          }
+        }
       }
       .name {
         text-transform: capitalize;
