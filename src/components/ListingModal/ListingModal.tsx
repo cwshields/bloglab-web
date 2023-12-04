@@ -14,6 +14,7 @@ export default function ListingModal(props: ListingModalType) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      className="bloglab-modal"
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">

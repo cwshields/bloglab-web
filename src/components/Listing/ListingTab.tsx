@@ -8,7 +8,7 @@ export default function ListingTab(props: Listing) {
   const { header, body, tags } = props;
   const [modalShow, setModalShow] = useState(false);
   return (
-    <>
+    <div className="taglist-wrap">
       <div className="bloglab-card listing" onClick={() => setModalShow(true)}>
         <h5 className="title">{header}</h5>
         <div className="body">{body}</div>
@@ -21,6 +21,6 @@ export default function ListingTab(props: Listing) {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-    </>
+    </div>
   );
 }

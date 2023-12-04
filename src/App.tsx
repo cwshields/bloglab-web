@@ -15,7 +15,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        <div className="container">
+        <div className="bloglab container">
           <SideNav />
           <Router />
         </div>
