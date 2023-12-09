@@ -1,6 +1,7 @@
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Listing from "../../types/Listing";
+import moment from "moment";
 
 interface ListingModalType extends Listing {
   show: boolean;
@@ -8,29 +9,32 @@ interface ListingModalType extends Listing {
 }
 
 export default function ListingModal(props: ListingModalType) {
+  const { header, body, user, date, onHide } = props
   return (
     <Modal
       {...props}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      className="bloglab-modal"
+      className="bloglab-modal listingtab-wrap"
     >
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          {header}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          facilis excepturi magni reiciendis debitis placeat corporis omnis in,
-          exercitationem amet aut quos voluptatem.
-        </p>
+        <p>{body}</p>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <div className="user-wrap">
+          <img className="avatar" src={user.avatar} alt="avatar" />
+          <div className="text-wrap">
+            <div className="user">{user.name}</div>
+            <div className="date">{moment(date).format("MMM DD YYYY")}</div>
+          </div>
+        </div>
+        <Button onClick={onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
   );

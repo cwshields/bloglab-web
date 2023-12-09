@@ -1,5 +1,9 @@
-.listing {
-  .body {
-    margin: 8px 0;
+.bloglab-modal {
+  .modal-header,
+  .modal-footer {
+    border: none;
+  }
+  .modal-footer {
+    justify-content: space-between;
   }
 }
