@@ -13,11 +13,73 @@ html {
 }
 
 .bloglab-modal {
-  background-color: #00000085;
+  background-color: #00000090;
+  .modal-lg {
+    width: 450px;
+    margin-top: 10em;
+  }
   .modal-content {
     background-color: #00337c;
+    .nav-fill {
+      border: none;
+      margin: 10px 7px;
+      .nav-item {
+        margin: 0 2.5px;
+        .nav-link {
+          border: none;
+          border-radius: 6px;
+        }
+      }
+    }
+    .modal-header {
+      justify-content: center;
+      padding: 16px 16px 4px;
+    }
+    .modal-body {
+      margin: 0 4px;
+      padding: 0px 16px 16px;
+      .signin-method-wrap {
+        display: flex;
+        justify-content: center;
+        button {
+          width: 42px;
+          height: 42px;
+          border-radius: 100%;
+          i {
+            font-size: 17px;
+          }
+        }
+      }
+      .input-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px 0;
+        input {
+          color: #e0e0e0;
+          border-radius: 4px;
+          border: none;
+          background-color: #002b68;
+          font-size: 17px;
+          padding: 6px 10px;
+          margin: 4px 0;
+        }
+      }
+      .forgot-password {
+        text-align: center;
+        a {
+          color: #f2f2f2;
+          text-decoration: none;
+        }
+      }
+    }
+    .modal-footer {
+      padding: 0;
+      margin: 0;
+    }
   }
 }
+
 
 .display-center {
   display: flex;
@@ -31,7 +93,7 @@ code {
 }
 
 .bloglab-card:hover {
-  background-color: #003177;
+  background-color: #003176;
 }
 
 .jumbotron {
@@ -55,6 +117,10 @@ code {
       color: #00d865;
     }
   }
+}
+
+.modal-open {
+  padding-right: 0px !important;
 }
 
 ::-webkit-scrollbar {

@@ -60,47 +60,6 @@
   color: #333333;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 90px;
-  input {
-    color: #535353;
-    border-radius: 4px;
-    border: none;
-    background-color: #f2f2f2;
-    font-size: 17px;
-    width: 268px;
-    padding: 6px 10px;
-  }
-  select,
-  textarea,
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus {
-    -webkit-text-fill-color: #535353;
-  }
-  input::placeholder {
-    color: #bebebe;
-  }
-}
-
-.signin-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-  color: #222222;
-  width: 268px;
-  height: 42px;
-  background-color: #00d865;
-  border-radius: 4px;
-  border: none;
-  padding-bottom: 0px;
-  cursor: pointer;
-}
-
 .signin-btn:hover {
   transition: 100ms;
   background-color: #00bd58;
@@ -123,19 +82,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0px;
   width: 100%;
   height: 70px;
-  background-color: #dbdbdb;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  margin: 0;
+  background-color: #002c6b;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .footer-link {
   user-select: none;
   cursor: pointer;
   font-size: 16px;
-  color: #8d8d8d;
+  color: #e3e3e3;
   padding: 4px 6px;
   margin-bottom: 4px;
 }
@@ -149,16 +107,53 @@
   max-width: none;
   .popover-header {
     text-align: center;
+    color: #222222;
   }
   .popover-body {
     padding: 0.6rem 0.8rem;
+    .help {
+      display: flex;
+    }
+    .modal-tooltip-wrap {
+      display: flex;
+      justify-content: center;
+      .modal-tooltip {
+        background-color: #0a2647;
+        border-radius: 5px;
+        padding: 3px 6px;
+        margin-top: 6px;
+        color: #00d865;
+      }
+    }
   }
 }
-.help {
-  display: flex;
-}
-.mid {
-  padding: 0 22px;
+
+.bloglab-modal {
+  .signin-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin: 20px 0 10px;
+    color: #222222;
+    width: 100%;
+    height: 42px;
+    background-color: #00d865;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+  .signin-btn:hover {
+    transition: 100ms;
+    background-color: #00bd58;
+  }
+  .form-check {
+    display: flex;
+    justify-content: center;
+    .form-check-input {
+      margin-right: 5px;
+    }
+  }
 }
 
 .footer-link:hover {
