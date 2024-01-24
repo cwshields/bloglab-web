@@ -24,9 +24,9 @@ import Blog from "./Blog/Blog";
 // TODO: Replace with axios calls
 import tags from "../data/tags";
 import { useGetData } from "../data/bloglabDataHooks";
-import listingCategories from "../data/listingCategories";
 
 // Types
+import listingCategories, { ListingsType } from "../data/listingCategories";
 import TagType from "../types/Tag";
 import BlogType from "../types/Blog";
 
@@ -47,9 +47,9 @@ const Router = () => {
   });
 
   const listingCategoryMap = listingCategories.map(
-    (listing: string, index: number) => {
+    (listing: ListingsType, index: number) => {
       return (
-        <Route key={index} path={`${listing}`} element={<ListingCardList />} />
+        <Route key={index} path={`${listing.url}`} element={<ListingCardList />} />
       );
     }
   );
