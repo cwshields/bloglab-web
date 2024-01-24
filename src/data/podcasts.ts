@@ -16,7 +16,8 @@ const podcasts: Array<Podcast> = [
             body: "Ipsam quibusdam cupiditate optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -24,7 +25,8 @@ const podcasts: Array<Podcast> = [
             body: "Consequuntur molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -32,7 +34,8 @@ const podcasts: Array<Podcast> = [
             body: "Dolorem fuga temporibus veritatis? Dolorum itaque aliquid commodi eum nostrum molestias accusantium beatae blanditiis dolor enim suscipit repellendus, totam eius dolore, autem minima assumenda laudantium consequatur?",
             date: "2023-06-20 13:36:32",
             user: {
-              name: "Neave Waters",
+              firstName: "Neave",
+              lastName: "Waters",
               avatar: "https://i.pravatar.cc/50?img=9",
             },
           },
@@ -47,7 +50,8 @@ const podcasts: Array<Podcast> = [
             body: "Dolorum itaque aliquid commodi eum nostrum molestias accusantium beatae blanditiis dolor enim suscipit repellendus, totam eius dolore, autem minima assumenda laudantium consequatur?",
             date: "2023-06-20 13:36:32",
             user: {
-              name: "Neave Waters",
+              firstName: "Neave",
+              lastName: "Waters",
               avatar: "https://i.pravatar.cc/50?img=9",
             },
           },
@@ -69,7 +73,8 @@ const podcasts: Array<Podcast> = [
             body: "Ipsam quibusdam cupiditate optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -77,7 +82,8 @@ const podcasts: Array<Podcast> = [
             body: "Consequuntur molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -92,7 +98,8 @@ const podcasts: Array<Podcast> = [
             body: "optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -100,7 +107,8 @@ const podcasts: Array<Podcast> = [
             body: "Molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -108,7 +116,8 @@ const podcasts: Array<Podcast> = [
             body: "Dolorum itaque aliquid commodi eum nostrum molestias accusantium beatae blanditiis dolor enim suscipit repellendus, totam eius dolore, autem minima assumenda laudantium consequatur?",
             date: "2023-06-20 13:36:32",
             user: {
-              name: "Neave Waters",
+              firstName: "Neave",
+              lastName: "Waters",
               avatar: "https://i.pravatar.cc/50?img=9",
             },
           },
@@ -131,7 +140,8 @@ const podcasts: Array<Podcast> = [
             body: "Ipsam quibusdam cupiditate optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -139,7 +149,8 @@ const podcasts: Array<Podcast> = [
             body: "Consequuntur molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -154,7 +165,8 @@ const podcasts: Array<Podcast> = [
             body: "optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -162,7 +174,8 @@ const podcasts: Array<Podcast> = [
             body: "Molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -170,7 +183,8 @@ const podcasts: Array<Podcast> = [
             body: "Dolorum itaque aliquid commodi eum nostrum molestias accusantium beatae blanditiis dolor enim suscipit repellendus, totam eius dolore, autem minima assumenda laudantium consequatur?",
             date: "2023-06-20 13:36:32",
             user: {
-              name: "Neave Waters",
+              firstName: "Neave",
+              lastName: "Waters",
               avatar: "https://i.pravatar.cc/50?img=9",
             },
           },
@@ -193,7 +207,8 @@ const podcasts: Array<Podcast> = [
             body: "Ipsam quibusdam cupiditate optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -201,7 +216,8 @@ const podcasts: Array<Podcast> = [
             body: "Consequuntur molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -216,7 +232,8 @@ const podcasts: Array<Podcast> = [
             body: "optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -224,7 +241,8 @@ const podcasts: Array<Podcast> = [
             body: "Molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -232,7 +250,8 @@ const podcasts: Array<Podcast> = [
             body: "Dolorum itaque aliquid commodi eum nostrum molestias accusantium beatae blanditiis dolor enim suscipit repellendus, totam eius dolore, autem minima assumenda laudantium consequatur?",
             date: "2023-06-20 13:36:32",
             user: {
-              name: "Neave Waters",
+              firstName: "Neave",
+              lastName: "Waters",
               avatar: "https://i.pravatar.cc/50?img=9",
             },
           },
@@ -255,7 +274,8 @@ const podcasts: Array<Podcast> = [
             body: "Ipsam quibusdam cupiditate optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -263,7 +283,8 @@ const podcasts: Array<Podcast> = [
             body: "Consequuntur molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -278,7 +299,8 @@ const podcasts: Array<Podcast> = [
             body: "optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -286,7 +308,8 @@ const podcasts: Array<Podcast> = [
             body: "Molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -294,7 +317,8 @@ const podcasts: Array<Podcast> = [
             body: "Dolorum itaque aliquid commodi eum nostrum molestias accusantium beatae blanditiis dolor enim suscipit repellendus, totam eius dolore, autem minima assumenda laudantium consequatur?",
             date: "2023-06-20 13:36:32",
             user: {
-              name: "Neave Waters",
+              firstName: "Neave",
+              lastName: "Waters",
               avatar: "https://i.pravatar.cc/50?img=9",
             },
           },
@@ -317,7 +341,8 @@ const podcasts: Array<Podcast> = [
             body: "Ipsam quibusdam cupiditate optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -325,7 +350,8 @@ const podcasts: Array<Podcast> = [
             body: "Consequuntur molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -340,7 +366,8 @@ const podcasts: Array<Podcast> = [
             body: "optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -348,7 +375,8 @@ const podcasts: Array<Podcast> = [
             body: "Molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -356,7 +384,8 @@ const podcasts: Array<Podcast> = [
             body: "Dolorum itaque aliquid commodi eum nostrum molestias accusantium beatae blanditiis dolor enim suscipit repellendus, totam eius dolore, autem minima assumenda laudantium consequatur?",
             date: "2023-06-20 13:36:32",
             user: {
-              name: "Neave Waters",
+              firstName: "Neave",
+              lastName: "Waters",
               avatar: "https://i.pravatar.cc/50?img=9",
             },
           },
@@ -379,7 +408,8 @@ const podcasts: Array<Podcast> = [
             body: "Ipsam quibusdam cupiditate optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -387,7 +417,8 @@ const podcasts: Array<Podcast> = [
             body: "Consequuntur molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -402,7 +433,8 @@ const podcasts: Array<Podcast> = [
             body: "optio laboriosam enim? Quaerat, sequi iste provident facere qui, accusamus repellendus ab voluptate fugiat eligendi aut, velit delectus exercitationem? Culpa commodi vitae dolores quae ipsum quidem, deleniti quam, nesciunt facilis est deserunt.",
             date: "2023-06-21 14:36:32",
             user: {
-              name: "Jack Dorson",
+              firstName: "Jack",
+              lastName: "Dorson",
               avatar: "https://i.pravatar.cc/50?img=21",
             },
           },
@@ -410,7 +442,8 @@ const podcasts: Array<Podcast> = [
             body: "Molestiae voluptates, quod natus harum optio voluptatem ipsa veritatis tenetur fuga nemo assumenda. Fuga, ipsa aliquid commodi veritatis aliquam?",
             date: "2023-06-21 12:36:32",
             user: {
-              name: "Raees Warren",
+              firstName: "Raees",
+              lastName: "Warren",
               avatar: "https://i.pravatar.cc/50?img=35",
             },
           },
@@ -418,7 +451,8 @@ const podcasts: Array<Podcast> = [
             body: "Dolorum itaque aliquid commodi eum nostrum molestias accusantium beatae blanditiis dolor enim suscipit repellendus, totam eius dolore, autem minima assumenda laudantium consequatur?",
             date: "2023-06-20 13:36:32",
             user: {
-              name: "Neave Waters",
+              firstName: "Neave",
+              lastName: "Waters",
               avatar: "https://i.pravatar.cc/50?img=9",
             },
           },

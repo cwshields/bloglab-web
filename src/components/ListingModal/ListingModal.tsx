@@ -30,7 +30,7 @@ export default function ListingModal(props: ListingModalType) {
         <div className="user-wrap">
           <img className="avatar" src={user.avatar} alt="avatar" />
           <div className="text-wrap">
-            <div className="user">{user.name}</div>
+            <div className="user">{user.firstName} {user.lastName}</div>
             <div className="date">{moment(date).format("MMM DD YYYY")}</div>
           </div>
         </div>
