@@ -3,8 +3,12 @@ export default function Tag(props: any) {
 
   return (
     <>
-      <div>#{name}</div>
-      <div>{description}</div>
+      <div className="bloglab-card">
+        <h2>#{name}</h2>
+      </div>
+      <div>
+        <div>{description}</div>
+      </div>
     </>
   );
 }

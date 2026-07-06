@@ -2,16 +2,13 @@ import TagCard from "../../components/TagList/TagCard";
 import tags from "../../data/tags";
 import Tag from "../../types/Tag";
 import FadeIn from "react-fade-in";
+import '../../sass/TagList.scss';
 
 export default function Tags() {
-  // let last = window.location.pathname
-  //   .replace(/\/$/, "")
-  //   .split("/")
-  //   .splice(-1, 1);
 
   return (
     <>
-      <div className="tag-list-wrap">
+      <div className="tag-list-wrap col-md-7 col-xxl-10">
         <div className="tag-list-header">
           <h2>Tag List</h2>
           <form className="d-flex search-bar" role="search">
@@ -29,7 +26,7 @@ export default function Tags() {
             </button>
           </form>
         </div>
-        <FadeIn delay={100}>
+        <FadeIn className="" delay={100}>
           <div className="tag-card-wrap">
             {tags
               .map((tag: Tag, index: number) => (

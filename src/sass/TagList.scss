@@ -15,17 +15,28 @@
 }
 
 .tag-list-wrap {
-  margin: 16px;
+  margin: 10px;
   .tag-list-header {
     display: flex;
     justify-content: space-between;
-    width: 1054px;
     margin-bottom: 10px;
+    padding-right: 8px;
     h2 {
-      width: 200px;
+      min-width: max-content;
+      margin-right: 16px;
     }
     form {
       width: 300px;
+    }
+    @media (min-width: 1400px) {
+      .search-bar {
+        margin-right: 26px;
+      }
+    }
+    @media (max-width: 768px) {
+      .search-bar {
+        max-width: 200px;
+      }
     }
   }
   .tag-card-wrap {
@@ -42,7 +53,7 @@
       display: block;
       border-radius: 10px;
       background-color: #00337c;
-      width: 340px;
+      width: 338px;
       padding: 20px 25px;
       margin: 8px;
       height: max-content;
@@ -66,6 +77,16 @@
           height: auto;
           transform: rotate(-10deg);
         }
+      }
+      @media (max-width: 768px) {
+        .tag-list-header {
+          max-width: 450px;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .tag-card {
+        width: 95%;
       }
     }
   }
