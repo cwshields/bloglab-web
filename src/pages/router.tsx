@@ -11,6 +11,7 @@ import Tag from "./Tag/Tag";
 import Guides from "./Guides/Guides";
 import Podcasts from "./Podcasts/Podcasts";
 import PodcastDetail from "./PodcastDetail/PodcastDetail";
+import EpisodeDetail from "./EpisodeDetail/EpisodeDetail";
 import FAQ from "./FAQ/FAQ";
 import Shop from "./Shop/Shop";
 import About from "./About/About";
@@ -31,6 +32,7 @@ import listingCategories, { ListingsType } from "../data/listingCategories";
 import TagType from "../types/Tag";
 import BlogType from "../types/Blog";
 import PodcastType from "../types/Podcast";
+import EpisodeType from "../types/Episode";
 
 const Router = () => {
   const [blogsData] = useGetData("blogs");
@@ -68,12 +70,21 @@ const Router = () => {
   });
 
   const podcastRoutes = podcastsData?.map((podcast: PodcastType, index: number) => {
+    const episodeRoutes = podcast.episodes.map(
+      (episode: EpisodeType, episodeIndex: number) => (
+        <Route
+          key={episodeIndex}
+          path={`${episode.name}`}
+          element={<EpisodeDetail podcastName={podcast.name} {...episode} />}
+        />
+      )
+    );
+
     return (
-      <Route
-        key={index}
-        path={`${podcast.name}`}
-        element={<PodcastDetail key={index} {...podcast} />}
-      />
+      <Route key={index} path={`${podcast.name}/*`}>
+        <Route index element={<PodcastDetail key={index} {...podcast} />} />
+        {episodeRoutes}
+      </Route>
     );
   });
 
