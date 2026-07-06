@@ -15,7 +15,7 @@ const lorem = new LoremIpsum({
 function getRandomNumber(max: number) {
   // This exclusion is for picsum images that are broken
   const excludeNumbers: Array<number> = [
-    246, 226, 224, 207, 205, 150, 148, 138, 105, 97, 86, 22,
+    246, 245, 226, 224, 207, 205, 150, 148, 138, 105, 97, 86, 22,
   ];
   let randomNumber;
   do {

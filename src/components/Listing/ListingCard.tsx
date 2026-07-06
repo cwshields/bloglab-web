@@ -38,7 +38,7 @@ export default function ListingCard(props: Listing) {
               src={user.avatar}
             />
             <div className="text-wrap">
-              <div className="user">{user.name}</div>
+              <div className="user">{user.firstName} {user.lastName}</div>
               <div className="category">{category}</div>
             </div>
           </div>

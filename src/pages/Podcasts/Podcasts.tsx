@@ -8,7 +8,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 export default function Podcasts() {
-  const podcastsList = generatePodcastList(100)
+  const podcastsList = generatePodcastList(52)
   const podcastListMap = podcastsList.map(
     (podcast: PodcastList, index: number) => {
       return (

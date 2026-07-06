@@ -21,11 +21,10 @@ export default function ListingCardList() {
     )
   );
 
-  const classList: string = "listing-wrap ";
   const classTernary: string | null = listingLoading ? "display-center" : null;
 
   return (
-    <div className={classList + classTernary}>
+    <div className={"listing-wrap " + classTernary}>
       {listingLoading ? (
         <img src="https://www.onwebchat.com/img/spinner.gif" alt="Loading..." />
       ) : (
