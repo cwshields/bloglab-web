@@ -2,6 +2,7 @@
 @import "./settings/mixins.scss";
 
 .podcast-wrap {
+  width: 100%;
   margin: 16px;
   h2 {
     font-size: 30px;
@@ -20,25 +21,30 @@
   a:hover {
     color: #00d865;
   }
-  .podcast-latest {
-    display: flex;
-    flex-direction: row;
-    margin: 0 -8px 16px;
-    .podcast-card {
-      margin: 0 8px;
-      width: 258px;
-      background-color: #00337c;
-      border-radius: 12px;
-      overflow: hidden;
-      img {
-        height: 250px;
+  .podcast-latest-wrap {
+    width: 100%;
+    margin: 0 0 16px;
+    .podcast-latest {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      margin: 0 0 16px;
+      .podcast-card {
+        width: 252px;
+        background-color: #00337c;
+        border-radius: 12px;
+        overflow: hidden;
+        img {
+          height: 250px;
+        }
+        .text-wrap {
+          padding: 10px 16px;
+        }
       }
-      .text-wrap {
-        padding: 10px 16px;
+      .image-lazyload {
+        background-color: #0099c3;
       }
-    }
-    .image-lazyload {
-      background-color: #0099c3;
     }
   }
   .featured-wrap {
@@ -50,8 +56,8 @@
       width: 32.5%;
       a {
         .featured-show {
-          width: 350px;
-          height: 350px;
+          width: 340px;
+          height: 340px;
         }
         h5 {
           width: 100%;
@@ -61,31 +67,37 @@
       }
     }
   }
-  .podcast-list-card-wrap {
-    display: inline-block;
-    width: 270px;
-    .podcast-list-card {
-      display: flex;
-      align-items: center;
-      margin: 4px;
-      .img-wrap {
-        margin-right: 10px;
-        border-radius: 6px;
-        border: 1px solid #0045a570;
-        span {
-          img {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            border-radius: 6px;
+  .podcast-list-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    .podcast-list-card-wrap {
+      display: inline-flex;
+      margin-bottom: 10px;
+      width: 260px;
+      .podcast-list-card {
+        display: inline-flex;
+        align-items: center;
+        .img-wrap {
+          margin-right: 10px;
+          border-radius: 6px;
+          border: 1px solid #0045a570;
+          span {
+            img {
+              display: inline-block;
+              width: 60px;
+              height: 60px;
+              border-radius: 6px;
+            }
           }
         }
-      }
-      .name {
-        text-transform: capitalize;
-      }
-      h5 {
-        font-size: larger;
+        .name {
+          text-transform: capitalize;
+        }
+        h5 {
+          font-size: larger;
+        }
       }
     }
   }

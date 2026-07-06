@@ -10,6 +10,7 @@ import ListingCardList from "../components/Listing/ListingCardList";
 import Tag from "./Tag/Tag";
 import Guides from "./Guides/Guides";
 import Podcasts from "./Podcasts/Podcasts";
+import PodcastDetail from "./PodcastDetail/PodcastDetail";
 import FAQ from "./FAQ/FAQ";
 import Shop from "./Shop/Shop";
 import About from "./About/About";
@@ -29,9 +30,11 @@ import { useGetData } from "../data/bloglabDataHooks";
 import listingCategories, { ListingsType } from "../data/listingCategories";
 import TagType from "../types/Tag";
 import BlogType from "../types/Blog";
+import PodcastType from "../types/Podcast";
 
 const Router = () => {
   const [blogsData] = useGetData("blogs");
+  const [podcastsData] = useGetData("podcasts");
 
   const tagArrayFilter = (arg: string) =>
     tags.filter((tag) => tag.name === arg);
@@ -64,6 +67,16 @@ const Router = () => {
     );
   });
 
+  const podcastRoutes = podcastsData?.map((podcast: PodcastType, index: number) => {
+    return (
+      <Route
+        key={index}
+        path={`${podcast.name}`}
+        element={<PodcastDetail key={index} {...podcast} />}
+      />
+    );
+  });
+
   return (
     <Routes>
       <Route path="" element={<Navigate replace to="/home/latest" />} />
@@ -79,7 +92,10 @@ const Router = () => {
         {tagRoutes}
       </Route>
       <Route path="/blog/*">{blogRoutes}</Route>
-      <Route path="/podcasts" element={<Podcasts />} />
+      <Route path="/podcasts/*">
+        <Route index element={<Podcasts />} />
+        {podcastRoutes}
+      </Route>
       <Route path="/guides" element={<Guides />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/shop" element={<Shop />} />
