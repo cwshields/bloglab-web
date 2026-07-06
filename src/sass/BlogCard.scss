@@ -1,7 +1,7 @@
 .blog-card {
   padding: 20px 24px;
   margin: 8px 0 16px;
-  background-color: #00337C;
+  background-color: #00337c;
   border-radius: 12px;
   a:hover {
     color: #00d865;
@@ -12,6 +12,12 @@
   .description {
     margin: 10px 0 14px;
   }
+  .avatar {
+    width: 50px;
+    height: auto;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
   .footer {
     display: flex;
     justify-content: space-between;
@@ -20,12 +26,7 @@
     .user-wrap {
       width: 230px;
       display: flex;
-      .avatar {
-        width: 50px;
-        height: auto;
-        margin-right: 8px;
-        border-radius: 50%;
-      }
+
       .text-wrap {
         display: flex;
         flex-direction: column;

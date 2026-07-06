@@ -4,7 +4,7 @@ export default function Conduct() {
   return (
     <FadeIn delay={100}>
       <div className="jumbotron">
-        <h2>Code of Conduct</h2>
+        <h2>Lorem Ipsum Dolor</h2>
         <p>
           Nam optio aspernatur blanditiis, sit pariatur itaque suscipit? Neque
           quisquam quam exercitationem ut sapiente laborum unde pariatur
@@ -14,7 +14,7 @@ export default function Conduct() {
           perferendis sequi libero repellat eveniet iste, quibusdam facilis quos
           fugit tenetur? Esse soluta culpa porro! Assumenda, at.
         </p>
-        <h2>Our Pledge</h2>
+        <h2>Sit Amet Consectetur</h2>
         <p>
           Perspiciatis neque ullam nostrum architecto enim animi quidem
           expedita, aut odio cumque laboriosam deleniti consectetur, laudantium
@@ -23,7 +23,7 @@ export default function Conduct() {
           Necessitatibus dolore eius asperiores ratione dolorum soluta rem optio
           laudantium magni facilis!
         </p>
-        <h2>Our Standards</h2>
+        <h2>Adipisicing Elit</h2>
         <p>
           Incidunt accusantium cupiditate, harum facilis atque sequi beatae qui
           exercitationem:
@@ -68,7 +68,7 @@ export default function Conduct() {
             mollitia dolor quasi natus nesciunt
           </li>
         </ul>
-        <h2>Enforcement</h2>
+        <h2>Sed Ut Perspiciatis</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minima
           sapiente iusto possimus et rerum at temporibus! Ratione aperiam ipsam,
@@ -80,7 +80,7 @@ export default function Conduct() {
           minima mollitia dolore quam sequi id? Laborum illo error at nostrum
           nesciunt.
         </p>
-        <h2>Attribution</h2>
+        <h2>Unde Omnis Iste</h2>
         <p>Amet eligendi ex vitae mollitia dolor quasi natus:</p>
         <ul>
           <li>

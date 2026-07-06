@@ -4,8 +4,8 @@ export default function Privacy() {
   return (
     <FadeIn delay={100}>
       <div className="jumbotron">
-        <h2>Privacy Policy</h2>
-        <p>Effective Dec 20, 2022</p>
+        <h2>Lorem Ipsum Dolor</h2>
+        <p>Consectetur Adipisci Elit</p>
         <p>Earum facere quibusdam! Ipsam laboriosam.</p>
         <h3>Lumque corrupti accusantium corporis quo neque</h3>
         <p>
@@ -69,7 +69,7 @@ export default function Privacy() {
             aperiam minima "deserunt reiciendis".
           </li>
         </ul>
-        <h3>Information Disclosure</h3>
+        <h3>Doloremque Laudantium</h3>
         <p>
           Et amet voluptas asperiores, ex consequatur delectus dolore quis
           temporibus voluptatibus quas corporis.
@@ -126,7 +126,7 @@ export default function Privacy() {
           sapiente culpa assumenda consequatur possimus aperiam quis tempore
           officia accusantium rerum. Et, ratione minus?
         </p>
-        <h3>Third Party Vendors</h3>
+        <h3>Totam Rem Aperiam</h3>
         <p>
           <strong>
             Temporibus dolore, blanditiis quo sapiente reiciendis odio:
@@ -229,7 +229,7 @@ export default function Privacy() {
           Consequuntur, perferendis.
         </p>
         <p>
-          <strong>voluptatem alias quam numquam BlogLab Community</strong>
+          <strong>voluptatem alias quam numquam eaque ipsa</strong>
           <br />
           Adipisci quaerat at cum quos ab necessitatibus laboriosam unde eius
           repellat voluptatem alias obcaecati laborum quam numquam nisi
