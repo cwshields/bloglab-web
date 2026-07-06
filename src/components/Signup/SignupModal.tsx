@@ -75,11 +75,21 @@ export default function SignupModal(props: any) {
           </div>
           <Form.Check
             type="checkbox"
+            name="agree"
             id="default-checkbox"
             label={customLabel}
+            onChange={(e) => {
+              handleInputChange({
+                target: {
+                  name: e.target.name,
+                  value: e.target.checked,
+                },
+              });
+            }}
+            checked={signupData.agree}
           />
           <Button variant="success" className="signin-btn" type="submit">
-            Signup (Close)
+            Signup
           </Button>
         </form>
       </Modal.Body>

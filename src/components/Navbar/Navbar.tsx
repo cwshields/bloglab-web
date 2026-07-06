@@ -34,15 +34,13 @@ export default function Navbar() {
           </div>
           <div className="navbar-right-wrap">
             <Button variant="success" onClick={() => setModalShow(true)}>
-              Login/Signup
+              <i className="fa-regular fa-circle-user"></i>
+              Account
             </Button>
           </div>
         </div>
       </div>
-      <FormTabModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
-      />
+      <FormTabModal show={modalShow} onHide={() => setModalShow(false)} />
     </>
   );
 }

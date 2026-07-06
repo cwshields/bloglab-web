@@ -61,6 +61,9 @@
   .navbar-right-wrap {
     display: flex;
     justify-content: space-between;
-    width: 135px;
+    margin-right: 6px;
+    i {
+      margin-right: 4px;
+    }
   }
 }
