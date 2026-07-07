@@ -3,6 +3,20 @@
   margin: 8px 0 16px;
   background-color: #00337c;
   border-radius: 12px;
+  .user-wrap {
+    display: flex;
+    align-items: center;
+    .avatar {
+      width: 50px;
+      height: auto;
+      margin-right: 8px;
+      border-radius: 50%;
+    }
+    .name {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
   a:hover {
     color: #00d865;
   }
@@ -53,5 +67,11 @@
         color: #00d865;
       }
     }
+  }
+}
+.author.blog-card {
+  border-top: #00bd58 14px solid;
+  .follow-button {
+    margin-top: 8px;
   }
 }

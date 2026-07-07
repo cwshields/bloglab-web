@@ -16,10 +16,12 @@ html {
   background-color: #00000090;
   .modal-lg {
     width: 450px;
-    margin-top: 10em;
+    display: flex;
+    margin-top: 8em;
   }
   .modal-content {
     background-color: #00337c;
+    color: #f2f2f2;
     .nav-fill {
       border: none;
       margin: 10px 7px;

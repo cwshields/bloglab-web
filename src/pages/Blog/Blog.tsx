@@ -1,11 +1,18 @@
 import BlogType from "../../types/Blog";
 import moment from "moment";
 import "../../sass/Blog.scss";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { useMemo, useState } from "react";
+import { marked } from "marked";
+import DOMPurify from "dompurify";
 
 export default function Blog(props: BlogType) {
-  const { title, description, user, date } = props;
-
+  const { title, body, user, date } = props;
+  const [follow, setFollow] = useState(false);
+  const bodyHtml = useMemo(
+    () => DOMPurify.sanitize(marked.parse(body ?? "") as string),
+    [body]
+  );
   return (
     <Container>
       <Row sm={8}>
@@ -21,15 +28,24 @@ export default function Blog(props: BlogType) {
               </div>
             </div>
             <h2>{title}</h2>
-            <div>{description}</div>
+            <div className="body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
           </div>
         </Col>
         <Col sm={4} className="author-wrap">
           <div className="author blog-card">
-            <img className="avatar" alt="avatar" src={user.avatar} />
-            <div className="name">
-              {user.firstName} {user.lastName}
+            <div className="user-wrap">
+              <img className="avatar" alt="avatar" src={user.avatar} />
+              <div className="name">
+                {user.firstName} {user.lastName}
+              </div>
             </div>
+            <Button
+              className="follow-button"
+              variant={follow ? "outline-light" : "primary"}
+              onClick={() => setFollow((current) => !current)}
+            >
+              {follow ? "Following" : "Follow"}
+            </Button>
           </div>
         </Col>
       </Row>

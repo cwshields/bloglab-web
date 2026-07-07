@@ -3,13 +3,15 @@
   padding: 0;
   .row {
     padding: 0;
-    .col {
-  
-    }
+
   }
-}
-.author-wrap {
-  .author {
-    
+  .body {
+    blockquote {
+      margin: 1em 0;
+      padding: 0.25em 1.25em;
+      border-left: 4px solid #00d865;
+      color: #cfd8dc;
+      font-style: italic;
+    }
   }
 }

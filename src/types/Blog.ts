@@ -6,6 +6,7 @@ export default interface Blog {
   id: number;
   title: string;
   banner?: string;
+  body?: string;
   description: string;
   readTime: number;
   date: string;
