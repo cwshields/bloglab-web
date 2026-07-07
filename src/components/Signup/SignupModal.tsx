@@ -50,6 +50,30 @@ export default function SignupModal(props: any) {
             />
           </div>
           <div className="input-wrap">
+            <label>First Name</label>
+            <input
+              autoComplete="off"
+              placeholder="First Name"
+              type="text"
+              name="firstName"
+              id="firstName"
+              value={signupData.firstName}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="input-wrap">
+            <label>Last Name</label>
+            <input
+              autoComplete="off"
+              placeholder="Last Name"
+              type="text"
+              name="lastName"
+              id="lastName"
+              value={signupData.lastName}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="input-wrap">
             <label>Password</label>
             <input
               autoComplete="off"
