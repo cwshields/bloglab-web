@@ -1,5 +1,5 @@
 // Dependencies
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, Outlet } from "react-router-dom";
 
 // Page components
 import Home from "./Home/Home";
@@ -102,8 +102,16 @@ const Router = () => {
         <Route path="all" element={<TagList />} />
         {tagRoutes}
       </Route>
-      <Route path="/blog/*">{blogRoutes}</Route>
-      <Route path="/podcasts/*">
+      <Route
+        path="/blog/*"
+        element={blogsData ? <Outlet /> : <div>Loading...</div>}
+      >
+        {blogRoutes}
+      </Route>
+      <Route
+        path="/podcasts/*"
+        element={podcastsData ? <Outlet /> : <div>Loading...</div>}
+      >
         <Route index element={<Podcasts />} />
         {podcastRoutes}
       </Route>
