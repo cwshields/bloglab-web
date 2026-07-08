@@ -8,10 +8,11 @@ import DOMPurify from "dompurify";
 
 export default function Blog(props: BlogType) {
   const { title, body, user, date } = props;
+  const { description, location, education, work, joined_date } = user;
   const [follow, setFollow] = useState(false);
   const bodyHtml = useMemo(
     () => DOMPurify.sanitize(marked.parse(body ?? "") as string),
-    [body]
+    [body],
   );
   return (
     <Container>
@@ -21,14 +22,17 @@ export default function Blog(props: BlogType) {
             <div className="user-wrap">
               <img className="avatar" src={user.avatar} alt="avatar" />
               <div className="text-wrap">
-                <div className="user">
+                <div className="name">
                   {user.firstName} {user.lastName}
                 </div>
                 <div className="date">{moment(date).format("MMM DD YYYY")}</div>
               </div>
             </div>
             <h2>{title}</h2>
-            <div className="body" dangerouslySetInnerHTML={{ __html: bodyHtml }} />
+            <div
+              className="body"
+              dangerouslySetInnerHTML={{ __html: bodyHtml }}
+            />
           </div>
         </Col>
         <Col sm={4} className="author-wrap">
@@ -40,12 +44,46 @@ export default function Blog(props: BlogType) {
               </div>
             </div>
             <Button
-              className="follow-button"
+              className={`follow-button${follow ? " following" : ""}`}
               variant={follow ? "outline-light" : "primary"}
               onClick={() => setFollow((current) => !current)}
             >
-              {follow ? "Following" : "Follow"}
+              <span className="label-default">{follow ? "Following" : "Follow"}</span>
+              {follow && <span className="label-hover">Unfollow</span>}
             </Button>
+            <div className="description">
+              <p>{description}</p>
+            </div>
+            <div className="info-wrap">
+              <div className="sub-header">Location</div>
+              <div>{location}</div>
+              <div className="sub-header">Education</div>
+              <div>{education}</div>
+              <div className="sub-header">Work</div>
+              <div>{work}</div>
+              <div className="sub-header">Joind</div>
+              <div>{joined_date}</div>
+            </div>
+            <div className="social-links">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://medium.com" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-medium"></i>
+              </a>
+              <a href="https://dev.to" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-dev"></i>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-github"></i>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noreferrer">
+                <i className="fa-brands fa-youtube"></i>
+              </a>
+            </div>
           </div>
         </Col>
       </Row>

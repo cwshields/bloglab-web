@@ -5,11 +5,11 @@ export default interface User {
   email?: string;
   avatar?: string;
   password?: string;
-  bio?: string;
+  description?: string;
   location?: string;
   education?: string;
-  profession?: string;
-  joined?: number;
+  work?: string;
+  joined_date?: string;
   admin?: boolean;
   employee?: boolean;
 }
