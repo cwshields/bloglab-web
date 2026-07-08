@@ -5,6 +5,7 @@ import { useState } from "react";
 import TagList from "../../components/TagList/ListingTagList";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import slugify from "../../utils/slugify";
 
 export default function BlogCard(props: Blog) {
   const { title, description, user, date, readTime, tags } = props;
@@ -18,7 +19,7 @@ export default function BlogCard(props: Blog) {
   return (
     <>
       <div className="bloglab-card blog-card">
-        <Link to={"/blog/" + title}>
+        <Link to={"/blog/" + slugify(title)}>
           <h2 className="title">{title}</h2>
         </Link>
         <div className="description">{description}</div>
@@ -29,7 +30,7 @@ export default function BlogCard(props: Blog) {
           <div className="user-wrap">
             <img className="avatar" src={user.avatar} alt="avatar" />
             <div className="text-wrap">
-              <div className="user">{user.firstName} {user.lastName}</div>
+              <div className="name">{user.firstName} {user.lastName}</div>
               <div className="date">{moment(date).format("MMM DD YYYY")}</div>
             </div>
           </div>

@@ -34,6 +34,9 @@ import BlogType from "../types/Blog";
 import PodcastType from "../types/Podcast";
 import EpisodeType from "../types/Episode";
 
+// Utils
+import slugify from "../utils/slugify";
+
 const Router = () => {
   const [blogsData] = useGetData("blogs");
   const [podcastsData] = useGetData("podcasts");
@@ -63,7 +66,7 @@ const Router = () => {
     return (
       <Route
         key={index}
-        path={`${blog.title}`}
+        path={slugify(blog.title)}
         element={<Blog key={index} {...blog} />}
       />
     );
