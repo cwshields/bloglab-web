@@ -1,0 +1,133 @@
+@import "./settings/variables.scss";
+
+.shop-fade-wrap {
+  width: 100%;
+  min-width: 0;
+}
+
+.shop-wrap {
+  width: 100%;
+  min-width: 0;
+  margin: 18px 16px;
+
+  h2 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+  }
+}
+
+.shop-item-card {
+  background-color: #00337c;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 150ms;
+
+  .shop-item-image-wrap,
+  .shop-item-image {
+    display: block;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .shop-item-name {
+    margin: 10px 12px 2px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .shop-item-price {
+    margin: 0 12px 12px;
+    color: #00d865;
+    font-weight: 600;
+  }
+
+  &:hover {
+    background-color: #003176;
+  }
+
+  &.featured {
+    width: auto;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 280px;
+
+    .shop-item-image-wrap,
+    .shop-item-image {
+      height: 220px;
+    }
+
+    .shop-item-name {
+      font-size: 16px;
+      margin-top: 14px;
+    }
+  }
+}
+
+.shop-item-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.shop-wrap .pagination {
+  .page-link {
+    background-color: #00337c;
+    border-color: #00234f;
+    color: #f2f2f2;
+  }
+
+  .page-link:hover {
+    background-color: #003176;
+    color: #f2f2f2;
+  }
+
+  .page-link:focus {
+    box-shadow: 0 0 0 0.25rem #19875490;
+  }
+
+  .page-item.active .page-link {
+    background-color: #00d865;
+    border-color: #00d865;
+    color: #0f0f0f;
+  }
+
+  .page-item.disabled .page-link {
+    background-color: #00234f;
+    border-color: #00234f;
+    color: #757575;
+  }
+}
+
+.shop-carousel {
+  background-color: #00234f;
+  border-radius: 12px;
+  padding: 20px 10px 46px;
+
+  .shop-carousel-slide {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+
+  .carousel-indicators {
+    bottom: 8px;
+
+    [data-bs-target] {
+      background-color: #00d865;
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 6%;
+  }
+}
