@@ -1,0 +1,48 @@
+@import "./settings/variables.scss";
+
+.contact-wrap {
+  max-width: 500px;
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+
+    .input-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 10px 0;
+
+      label {
+        margin-bottom: 4px;
+      }
+
+      input,
+      textarea {
+        color: #e0e0e0;
+        border-radius: 4px;
+        border: none;
+        background-color: #002b68;
+        font-size: 17px;
+        padding: 6px 10px;
+        font-family: inherit;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      .char-counter {
+        align-self: flex-end;
+        font-size: 13px;
+        color: #a0a0a0;
+        margin-top: 4px;
+      }
+    }
+
+    .signin-btn {
+      margin-top: 10px;
+      align-self: flex-start;
+    }
+  }
+}
