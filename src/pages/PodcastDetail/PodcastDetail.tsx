@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Podcast from "../../types/Podcast";
-import Episode from "../../types/Episode";
 import moment from "moment";
 import "../../sass/PodcastDetail.scss";
 import { LazyLoadImage } from "react-lazy-load-image-component";

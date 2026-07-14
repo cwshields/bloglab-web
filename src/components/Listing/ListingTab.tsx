@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Listing from "../../types/Listing";
 import TagList from "../TagList/ListingTagList";
 import "../../sass/ListingTab.scss";
 import ListingModal from "../ListingModal/ListingModal";

@@ -1,4 +1,3 @@
-import Tag from "../../types/Tag";
 import "../../sass/TagList.scss";
 import { Button } from "react-bootstrap";
 import { useState } from "react";

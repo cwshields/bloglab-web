@@ -1,4 +1,3 @@
-import BlogType from "../../types/Blog";
 import moment from "moment";
 import "../../sass/Blog.scss";
 import { Container, Row, Col, Button } from "react-bootstrap";
@@ -6,7 +5,7 @@ import { useMemo, useState } from "react";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 
-export default function Blog(props: BlogType) {
+export default function Blog(props: Blog) {
   const { title, body, user, date } = props;
   const { description, location, education, work, joined_date } = user;
   const [follow, setFollow] = useState(false);

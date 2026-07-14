@@ -1,13 +1,7 @@
-import Episode from "../../types/Episode";
-import Comment from "../../types/Comment";
 import moment from "moment";
 import "../../sass/EpisodeDetail.scss";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-
-interface EpisodeDetailProps extends Episode {
-  podcastName: string;
-}
 
 export default function EpisodeDetail(props: EpisodeDetailProps) {
   const { podcastName, name, description, avatar, date, comments } = props;

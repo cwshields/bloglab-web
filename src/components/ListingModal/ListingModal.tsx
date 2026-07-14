@@ -1,12 +1,6 @@
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import Listing from "../../types/Listing";
 import moment from "moment";
-
-interface ListingModalType extends Listing {
-  show: boolean;
-  onHide: () => void;
-}
 
 export default function ListingModal(props: ListingModalType) {
   const { header, body, user, date, onHide } = props

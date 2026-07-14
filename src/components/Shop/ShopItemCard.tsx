@@ -1,10 +1,5 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import ShopItem from "../../types/ShopItem";
-
-interface ShopItemCardProps extends ShopItem {
-  className?: string;
-}
 
 export default function ShopItemCard(props: ShopItemCardProps) {
   const { name, price, image, className } = props;

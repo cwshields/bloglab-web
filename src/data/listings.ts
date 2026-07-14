@@ -1,4 +1,3 @@
-import Listing from "../types/Listing";
 
 export const listings: Array<Listing> = [
   {

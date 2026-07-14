@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Listing from "../../types/Listing";
 import moment from "moment";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";

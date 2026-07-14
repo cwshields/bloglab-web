@@ -1,4 +1,3 @@
-import Blog from "../../types/Blog";
 import { useGetData } from "../../data/bloglabDataHooks";
 import BlogCard from "../../pages/BlogCard/BlogCard";
 import FadeIn from "react-fade-in";

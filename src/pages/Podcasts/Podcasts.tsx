@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Podcast from "../../types/Podcast";
-import Episode from "../../types/Episode";
 import { useGetData } from "../../data/bloglabDataHooks";
 import "../../sass/Podcasts.scss";
 import FadeIn from "react-fade-in/lib/FadeIn";
@@ -8,11 +6,6 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Button } from "react-bootstrap";
 import { useState } from "react";
-
-interface LatestEpisode {
-  podcast: Podcast;
-  episode: Episode;
-}
 
 function getLatestEpisodes(
   podcasts: Array<Podcast>,

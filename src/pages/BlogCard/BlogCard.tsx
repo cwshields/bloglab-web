@@ -1,4 +1,3 @@
-import Blog from "../../types/Blog";
 import "../../sass/BlogCard.scss";
 import "../../sass/settings/colors.scss";
 import { useState } from "react";

@@ -1,12 +1,7 @@
 import { Carousel } from "react-bootstrap";
-import ShopItem from "../../types/ShopItem";
 import ShopItemCard from "./ShopItemCard";
 
 const ITEMS_PER_SLIDE = 3;
-
-interface ShopCarouselProps {
-  items: Array<ShopItem>;
-}
 
 export default function ShopCarousel(props: ShopCarouselProps) {
   const { items } = props;

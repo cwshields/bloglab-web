@@ -1,10 +1,5 @@
 import { LoremIpsum } from "lorem-ipsum";
 
-export interface PodcastList {
-  name: string;
-  avatar: string;
-}
-
 const lorem = new LoremIpsum({
   wordsPerSentence: {
     max: 6,

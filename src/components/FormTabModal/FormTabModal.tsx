@@ -7,19 +7,6 @@ import "../../sass/Signup.scss";
 export default function FormTabModal(props: any) {
   const [key, setKey]: [any, any] = useState("login");
 
-  type SignupDataType = {
-    email: string;
-    username: string;
-    password1: string;
-    password2: string;
-    agree: boolean;
-  };
-
-  type LoginDataType = {
-    email: string;
-    password: string;
-  };
-
   const [signupData, setSignupData] = useState({
     email: "",
     username: "",

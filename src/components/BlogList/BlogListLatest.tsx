@@ -1,7 +1,6 @@
 import { ReactElement } from "react";
 import FadeIn from "react-fade-in";
 import { useGetData } from "../../data/bloglabDataHooks";
-import Blog from "../../types/Blog";
 import BlogCard from "../../pages/BlogCard/BlogCard";
 
 export default function BlogListLatest() {

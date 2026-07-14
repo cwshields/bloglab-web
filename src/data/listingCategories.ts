@@ -1,8 +1,3 @@
-export interface ListingsType {
-  url: string;
-  name: string;
-}
-
 const listingCategories: Array<ListingsType> = [
   { url: "all", name: "All Listings" },
   { url: "collabs", name: "Contributors/Collaborators Wanted" },

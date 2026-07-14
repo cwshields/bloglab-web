@@ -1,6 +1,5 @@
 import { ReactElement } from "react";
 import ListingCard from "./ListingCard";
-import Listing from "../../types/Listing";
 import { useGetData } from "../../data/bloglabDataHooks";
 
 export default function ListingCardList() {

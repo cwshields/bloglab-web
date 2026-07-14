@@ -28,11 +28,7 @@ import tags from "../data/tags";
 import { useGetData } from "../data/bloglabDataHooks";
 
 // Types
-import listingCategories, { ListingsType } from "../data/listingCategories";
-import TagType from "../types/Tag";
-import BlogType from "../types/Blog";
-import PodcastType from "../types/Podcast";
-import EpisodeType from "../types/Episode";
+import listingCategories from "../data/listingCategories";
 
 // Utils
 import slugify from "../utils/slugify";
@@ -44,7 +40,7 @@ const Router = () => {
   const tagArrayFilter = (arg: string) =>
     tags.filter((tag) => tag.name === arg);
 
-  const tagRoutes = tags.map((tag: TagType, index: number) => {
+  const tagRoutes = tags.map((tag: Tag, index: number) => {
     return (
       <Route
         key={index}
@@ -62,7 +58,7 @@ const Router = () => {
     }
   );
 
-  const blogRoutes = blogsData?.map((blog: BlogType, index: number) => {
+  const blogRoutes = blogsData?.map((blog: Blog, index: number) => {
     return (
       <Route
         key={index}
@@ -72,9 +68,9 @@ const Router = () => {
     );
   });
 
-  const podcastRoutes = podcastsData?.map((podcast: PodcastType, index: number) => {
+  const podcastRoutes = podcastsData?.map((podcast: Podcast, index: number) => {
     const episodeRoutes = podcast.episodes.map(
-      (episode: EpisodeType, episodeIndex: number) => (
+      (episode: Episode, episodeIndex: number) => (
         <Route
           key={episodeIndex}
           path={`${episode.name}`}

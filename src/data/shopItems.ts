@@ -1,4 +1,3 @@
-import ShopItem from "../types/ShopItem";
 
 const shopItems: Array<ShopItem> = [
   {

@@ -1,6 +1,5 @@
 import TagCard from "../../components/TagList/TagCard";
 import tags from "../../data/tags";
-import Tag from "../../types/Tag";
 import FadeIn from "react-fade-in";
 import '../../sass/TagList.scss';
 

@@ -4,7 +4,6 @@ import { listings } from "../../data/listings";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import ListingTab from "../../components/Listing/ListingTab";
-import Listing from "../../types/Listing";
 import FadeIn from "react-fade-in";
 import { Outlet } from "react-router-dom";
 
