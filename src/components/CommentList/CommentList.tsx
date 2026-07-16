@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import moment from "moment";
 import { Button } from "react-bootstrap";
 import FormTabModal from "../FormTabModal/FormTabModal";
 import "../../sass/CommentList.scss";
 
-interface CommentListProps {
-  comments: Array<Comment>;
-}
-
 export default function CommentList({ comments }: CommentListProps) {
   const [showLoginModal, setShowLoginModal] = useState(false);
+
+  const sortedComments = useMemo(
+    () =>
+      [...comments].sort((a, b) => moment(b.date).valueOf() - moment(a.date).valueOf()),
+    [comments],
+  );
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,7 +42,7 @@ export default function CommentList({ comments }: CommentListProps) {
         </div>
       ) : (
         <div className="comment-list">
-          {comments.map((comment: Comment, index: number) => (
+          {sortedComments.map((comment: Comment, index: number) => (
             <div className="comment-card" key={index}>
               <div className="user-wrap">
                 <img

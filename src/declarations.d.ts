@@ -115,7 +115,11 @@ declare global {
     admin?: boolean;
     employee?: boolean;
   }
-  
+
+  interface CommentListProps {
+    comments: Array<Comment>;
+  }
+
   type SignupDataType = {
     email: string;
     username: string;
