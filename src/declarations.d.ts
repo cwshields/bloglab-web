@@ -13,6 +13,7 @@ declare global {
     tags: Array<string>;
     user: User;
     likes?: Likes;
+    comments?: Array<Comment>;
   }
 
   interface Comment {

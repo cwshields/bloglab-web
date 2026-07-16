@@ -4,9 +4,10 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { useMemo, useState } from "react";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
+import CommentList from "../../components/CommentList/CommentList";
 
 export default function Blog(props: Blog) {
-  const { title, body, user, date } = props;
+  const { title, body, user, date, comments } = props;
   const { description, location, education, work, joined_date } = user;
   const [follow, setFollow] = useState(false);
   const bodyHtml = useMemo(
@@ -33,6 +34,7 @@ export default function Blog(props: Blog) {
               dangerouslySetInnerHTML={{ __html: bodyHtml }}
             />
           </div>
+          <CommentList comments={comments ?? []} />
         </Col>
         <Col sm={4} className="author-wrap">
           <div className="author blog-card">

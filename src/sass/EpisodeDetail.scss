@@ -8,11 +8,6 @@
     font-weight: 700;
     margin: 8px 0;
   }
-  h3 {
-    font-size: 25px;
-    font-weight: 700;
-    margin: 25px 0;
-  }
   .episode-detail-header {
     display: flex;
     align-items: center;
@@ -36,21 +31,5 @@
   }
   .description {
     margin-top: 16px;
-  }
-  .comment-list {
-    display: flex;
-    flex-direction: column;
-    .comment-card {
-      background-color: #00337c;
-      border-radius: 12px;
-      padding: 12px 16px;
-      margin-bottom: 12px;
-      .user-wrap {
-        margin-bottom: 8px;
-      }
-      .body {
-        color: #d0d0d0;
-      }
-    }
   }
 }

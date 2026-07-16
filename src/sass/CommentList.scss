@@ -1,0 +1,57 @@
+@import "./settings/colors.scss";
+@import "./settings/mixins.scss";
+
+.comment-section {
+  h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 25px 0;
+  }
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    textarea {
+      color: #e0e0e0;
+      border-radius: 4px;
+      border: none;
+      background-color: #002b68;
+      font-size: 17px;
+      padding: 8px 12px;
+      font-family: inherit;
+      resize: vertical;
+      cursor: pointer;
+    }
+
+    .post-comment-btn {
+      margin-top: 10px;
+      align-self: flex-start;
+    }
+  }
+
+  .no-comments {
+    color: #d0d0d0;
+  }
+
+  .comment-list {
+    display: flex;
+    flex-direction: column;
+
+    .comment-card {
+      background-color: #00337c;
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+
+      .user-wrap {
+        margin-bottom: 8px;
+      }
+
+      .body {
+        color: #d0d0d0;
+      }
+    }
+  }
+}
