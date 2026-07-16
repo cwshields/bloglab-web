@@ -5,6 +5,7 @@ import Router from "./pages/router";
 import { useEffect } from "react";
 import SideNav from "./components/SideNav/SideNav";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { AuthProvider } from "./context/AuthContext";
 
 export default function App() {
   useEffect(() => {
@@ -12,7 +13,7 @@ export default function App() {
   }, []);
 
   return (
-    <>
+    <AuthProvider>
       <BrowserRouter>
         <Navbar />
         <div className="bloglab container">
@@ -20,6 +21,6 @@ export default function App() {
           <Router />
         </div>
       </BrowserRouter>
-    </>
+    </AuthProvider>
   );
 }

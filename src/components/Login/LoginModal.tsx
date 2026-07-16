@@ -5,9 +5,9 @@ import { Button, Modal } from "react-bootstrap";
 import "./../../sass/Login.scss";
 import SigninMethods from "../SigninMethods/SigninMethods";
 
-export default function LoginModal(props: any) {
+export default function LoginModal(props: LoginModalProps) {
   const [copied, setCopied] = useState(false);
-  const { handleSubmit, loginData, handleInputChange } = props;
+  const { handleSubmit, loginData, handleInputChange, error } = props;
 
   const copyText = (text: string) => {
     navigator.clipboard.writeText(text);
@@ -68,13 +68,13 @@ export default function LoginModal(props: any) {
         <SigninMethods />
         <form onSubmit={handleSubmit}>
           <div className="input-wrap">
-            <div>Email</div>
+            <div>Email or Username</div>
             <input
-              placeholder="email@website.com"
-              type="email"
-              name="email"
+              placeholder="email@website.com or username"
+              type="text"
+              name="identifier"
               id="login-email"
-              value={loginData.email}
+              value={loginData.identifier}
               onChange={handleInputChange}
             />
           </div>
@@ -89,6 +89,7 @@ export default function LoginModal(props: any) {
               onChange={handleInputChange}
             />
           </div>
+          {error && <div className="form-error">{error}</div>}
           <Button variant="success" className="signin-btn" type="submit">
             Login
           </Button>

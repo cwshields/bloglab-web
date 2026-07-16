@@ -101,6 +101,7 @@ declare global {
   }
 
   interface User {
+    id?: string;
     firstName: string;
     lastName: string;
     username?: string;
@@ -112,17 +113,49 @@ declare global {
     education?: string;
     work?: string;
     joined_date?: string;
-    admin?: boolean;
-    employee?: boolean;
+    is_admin?: boolean;
+    is_employee?: boolean;
   }
 
   interface CommentListProps {
     comments: Array<Comment>;
   }
 
+  interface AuthContextValue {
+    user: User | null;
+    login: (identifier: string, password: string) => Promise<string | null>;
+    signup: (data: SignupDataType) => Promise<string | null>;
+    logout: () => void;
+  }
+
+  interface FormTabModalProps {
+    show: boolean;
+    onHide: () => void;
+  }
+
+  interface LoginModalProps {
+    loginData: LoginDataType;
+    error: string | null;
+    onHide: () => void;
+    handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+  }
+
+  interface SignupModalProps {
+    signupData: SignupDataType;
+    error: string | null;
+    onHide: () => void;
+    handleInputChange: (event: {
+      target: { name: string; value: string | boolean };
+    }) => void;
+    handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+  }
+
   type SignupDataType = {
     email: string;
     username: string;
+    firstName: string;
+    lastName: string;
     password1: string;
     password2: string;
     agree: boolean;
@@ -139,7 +172,7 @@ declare global {
         : any[];
 
   type LoginDataType = {
-    email: string;
+    identifier: string;
     password: string;
   };
 

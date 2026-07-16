@@ -4,8 +4,8 @@ import "../../sass/App.scss";
 import "../../sass/Signup.scss";
 import SigninMethods from "../SigninMethods/SigninMethods";
 
-export default function SignupModal(props: any) {
-  const { handleSubmit, signupData, handleInputChange } = props;
+export default function SignupModal(props: SignupModalProps) {
+  const { handleSubmit, signupData, handleInputChange, error } = props;
   const customLabel = (
     <div>
       I have read and agree to the{" "}
@@ -112,6 +112,7 @@ export default function SignupModal(props: any) {
             }}
             checked={signupData.agree}
           />
+          {error && <div className="form-error">{error}</div>}
           <Button variant="success" className="signin-btn" type="submit">
             Signup
           </Button>

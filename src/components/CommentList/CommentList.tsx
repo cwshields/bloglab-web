@@ -3,9 +3,12 @@ import moment from "moment";
 import { Button } from "react-bootstrap";
 import FormTabModal from "../FormTabModal/FormTabModal";
 import "../../sass/CommentList.scss";
+import { useAuth } from "../../context/AuthContext";
 
 export default function CommentList({ comments }: CommentListProps) {
+  const { user } = useAuth();
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [commentText, setCommentText] = useState("");
 
   const sortedComments = useMemo(
     () =>
@@ -21,17 +24,26 @@ export default function CommentList({ comments }: CommentListProps) {
     <div className="comment-section">
       <h3>Comments</h3>
       <form onSubmit={handleSubmit} className="comment-form">
-        <textarea
-          readOnly
-          rows={3}
-          placeholder="Log in to leave a comment..."
-          onClick={() => setShowLoginModal(true)}
-        />
+        {user ? (
+          <textarea
+            rows={3}
+            placeholder="Add a comment..."
+            value={commentText}
+            onChange={(e) => setCommentText(e.target.value)}
+          />
+        ) : (
+          <textarea
+            readOnly
+            rows={3}
+            placeholder="Log in to leave a comment..."
+            onClick={() => setShowLoginModal(true)}
+          />
+        )}
         <Button
           variant="success"
           className="post-comment-btn"
           type="submit"
-          onClick={() => setShowLoginModal(true)}
+          onClick={() => !user && setShowLoginModal(true)}
         >
           Post Comment
         </Button>
