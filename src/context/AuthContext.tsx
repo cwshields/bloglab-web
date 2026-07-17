@@ -74,8 +74,18 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     clearSession();
   };
 
+  const updateUser: AuthContextValue["updateUser"] = (data) => {
+    setUser((current) => {
+      if (!current) return current;
+      const updated = { ...current, ...data };
+      const token = localStorage.getItem(TOKEN_STORAGE_KEY);
+      if (token) persistSession(updated, token);
+      return updated;
+    });
+  };
+
   return (
-    <AuthContext.Provider value={{ user, login, signup, logout }}>
+    <AuthContext.Provider value={{ user, login, signup, logout, updateUser }}>
       {children}
     </AuthContext.Provider>
   );

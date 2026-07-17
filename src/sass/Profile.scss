@@ -1,0 +1,59 @@
+@import "./settings/colors.scss";
+
+.profile-wrap {
+  padding: 0;
+  min-width: 0;
+  h2 {
+    margin: 8px 0 16px;
+  }
+  .no-activity {
+    color: #d0d0d0;
+  }
+  .feed-list {
+    display: flex;
+    flex-direction: column;
+    .comment-feed-card {
+      background-color: #00337c;
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin: 8px 0 16px;
+      .user-wrap {
+        width: 100%;
+        margin-bottom: 8px;
+        .text-wrap {
+          flex: 1;
+          min-width: 0;
+        }
+      }
+      .history-text {
+        font-size: 16px;
+        font-weight: 600;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        a {
+          color: inherit;
+          text-decoration: underline;
+        }
+        a:hover {
+          color: #00d865;
+        }
+      }
+      .date {
+        font-size: 13px;
+        color: #d0d0d0;
+      }
+      .body {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-clamp: 3;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        color: #d0d0d0;
+        margin-top: 4px;
+      }
+    }
+  }
+}

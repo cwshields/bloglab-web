@@ -21,6 +21,8 @@ import Privacy from "./Privacy/Privacy";
 import Terms from "./Terms/Terms";
 import TagList from "./TagList/TagList";
 import Blog from "./Blog/Blog";
+import Profile from "./Profile/Profile";
+import Settings from "./Settings/Settings";
 
 // Data
 // TODO: Replace with axios calls
@@ -117,6 +119,8 @@ const Router = () => {
       <Route path="/guides" element={<Guides />} />
       <Route path="/faq" element={<FAQ />} />
       <Route path="/shop" element={<Shop />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/settings" element={<Settings />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/conduct" element={<Conduct />} />

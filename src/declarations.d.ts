@@ -121,11 +121,23 @@ declare global {
     comments: Array<Comment>;
   }
 
+  type ProfileFeedItem =
+    | { type: "blog"; date: string; blog: Blog }
+    | { type: "comment"; date: string; comment: Comment; blog: Blog };
+
+  type SettingsPreferences = {
+    emailOnComment: boolean;
+    weeklyDigest: boolean;
+    showEmailPublicly: boolean;
+    showActivityPublicly: boolean;
+  };
+
   interface AuthContextValue {
     user: User | null;
     login: (identifier: string, password: string) => Promise<string | null>;
     signup: (data: SignupDataType) => Promise<string | null>;
     logout: () => void;
+    updateUser: (data: Partial<User>) => void;
   }
 
   interface FormTabModalProps {
