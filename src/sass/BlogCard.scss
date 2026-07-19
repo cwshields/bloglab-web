@@ -7,7 +7,7 @@
   .user-wrap {
     display: flex;
     .avatar {
-      width: 50px;
+      width: 58px;
       height: auto;
       margin-right: 8px;
       border-radius: 50%;
@@ -15,6 +15,9 @@
     .name {
       font-size: 16px;
       font-weight: 600;
+      a {
+        text-decoration: none;
+      }
     }
     .text-wrap {
       .date {
@@ -78,9 +81,9 @@
 .author.blog-card {
   border-top: #00bd58 40px solid;
   .user-wrap {
-    margin-top: -36px;
+    margin-top: -41px;
     .name {
-      margin-top: 21px;
+      margin-top: 28px;
     }
   }
   .follow-button {

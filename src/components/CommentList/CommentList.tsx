@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
 import moment from "moment";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import FormTabModal from "../FormTabModal/FormTabModal";
 import "../../sass/CommentList.scss";
 import { useAuth } from "../../context/AuthContext";
+import getUserKey from "../../utils/getUserKey";
 
 export default function CommentList({ comments }: CommentListProps) {
   const { user } = useAuth();
@@ -64,7 +66,9 @@ export default function CommentList({ comments }: CommentListProps) {
                 />
                 <div className="text-wrap">
                   <div className="user">
-                    {comment.user.firstName} {comment.user.lastName}
+                    <Link to={`/profile/${getUserKey(comment.user)}`}>
+                      {comment.user.firstName} {comment.user.lastName}
+                    </Link>
                   </div>
                   <div className="date">
                     {moment(comment.date).format("MMM DD YYYY")}

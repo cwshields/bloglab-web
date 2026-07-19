@@ -1,10 +1,12 @@
 import moment from "moment";
 import "../../sass/Blog.scss";
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useMemo, useState } from "react";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 import CommentList from "../../components/CommentList/CommentList";
+import getUserKey from "../../utils/getUserKey";
 
 export default function Blog(props: Blog) {
   const { title, body, user, date, comments } = props;
@@ -23,7 +25,9 @@ export default function Blog(props: Blog) {
               <img className="avatar" src={user.avatar} alt="avatar" />
               <div className="text-wrap">
                 <div className="name">
-                  {user.firstName} {user.lastName}
+                  <Link to={`/profile/${getUserKey(user)}`}>
+                    {user.firstName} {user.lastName}
+                  </Link>
                 </div>
                 <div className="date">{moment(date).format("MMM DD YYYY")}</div>
               </div>
@@ -41,7 +45,9 @@ export default function Blog(props: Blog) {
             <div className="user-wrap">
               <img className="avatar" alt="avatar" src={user.avatar} />
               <div className="name">
-                {user.firstName} {user.lastName}
+                <Link to={`/profile/${getUserKey(user)}`}>
+                  {user.firstName} {user.lastName}
+                </Link>
               </div>
             </div>
             <Button

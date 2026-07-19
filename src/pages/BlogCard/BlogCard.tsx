@@ -5,6 +5,7 @@ import TagList from "../../components/TagList/ListingTagList";
 import moment from "moment";
 import { Link } from "react-router-dom";
 import slugify from "../../utils/slugify";
+import getUserKey from "../../utils/getUserKey";
 
 export default function BlogCard(props: Blog) {
   const { title, description, user, date, readTime, tags } = props;
@@ -29,7 +30,11 @@ export default function BlogCard(props: Blog) {
           <div className="user-wrap">
             <img className="avatar" src={user.avatar} alt="avatar" />
             <div className="text-wrap">
-              <div className="name">{user.firstName} {user.lastName}</div>
+              <div className="name">
+                <Link to={`/profile/${getUserKey(user)}`}>
+                  {user.firstName} {user.lastName}
+                </Link>
+              </div>
               <div className="date">{moment(date).format("MMM DD YYYY")}</div>
             </div>
           </div>

@@ -48,6 +48,15 @@
 
       .user-wrap {
         margin-bottom: 8px;
+        .user {
+          a {
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+              color: #00d865;
+            }
+          }
+        }
       }
 
       .body {
