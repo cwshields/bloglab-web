@@ -57,3 +57,21 @@
     }
   }
 }
+
+.stats.blog-card {
+  display: flex;
+  flex-direction: column;
+  .stat-row {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    i {
+      width: 20px;
+      margin-right: 12px;
+      font-size: 16px;
+      color: #d0d0d0;
+    }
+  }
+}

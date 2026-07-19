@@ -1,12 +1,13 @@
 import { useMemo, useState } from "react";
 import moment from "moment";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useGetData } from "../../data/bloglabDataHooks";
 import BlogCard from "../BlogCard/BlogCard";
 import FormTabModal from "../../components/FormTabModal/FormTabModal";
 import slugify from "../../utils/slugify";
+import getUserKey from "../../utils/getUserKey";
 import "../../sass/Profile.scss";
 import "../../sass/BlogCard.scss";
 
@@ -17,30 +18,61 @@ function isSameUser(a: User, b: User): boolean {
   return a.firstName === b.firstName && a.lastName === b.lastName;
 }
 
+function collectUsers(blogsData?: Array<Blog>): User[] {
+  if (!blogsData) return [];
+  const users = new Map<string, User>();
+  blogsData.forEach((blog) => {
+    users.set(getUserKey(blog.user), blog.user);
+    (blog.comments ?? []).forEach((comment) => {
+      users.set(getUserKey(comment.user), comment.user);
+    });
+  });
+  return [...users.values()];
+}
+
 export default function Profile() {
-  const { user } = useAuth();
+  const { user: authUser } = useAuth();
+  const { profileId } = useParams<{ profileId?: string }>();
   const [blogsData, blogsLoading] = useGetData("blogs");
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [follow, setFollow] = useState(false);
+
+  const isOwnProfile = !profileId;
+
+  const allUsers = useMemo(() => collectUsers(blogsData), [blogsData]);
+
+  const profileUser = useMemo<User | null>(() => {
+    if (isOwnProfile) return authUser;
+    return allUsers.find((candidate) => getUserKey(candidate) === profileId) ?? null;
+  }, [isOwnProfile, authUser, allUsers, profileId]);
 
   const feed = useMemo<ProfileFeedItem[]>(() => {
-    if (!user || !blogsData) return [];
+    if (!profileUser || !blogsData) return [];
 
-    const myBlogs: ProfileFeedItem[] = blogsData
-      .filter((blog) => isSameUser(blog.user, user))
+    const userBlogs: ProfileFeedItem[] = blogsData
+      .filter((blog) => isSameUser(blog.user, profileUser))
       .map((blog) => ({ type: "blog", date: blog.date, blog }));
 
-    const myComments: ProfileFeedItem[] = blogsData.flatMap((blog) =>
+    const userComments: ProfileFeedItem[] = blogsData.flatMap((blog) =>
       (blog.comments ?? [])
-        .filter((comment) => isSameUser(comment.user, user))
+        .filter((comment) => isSameUser(comment.user, profileUser))
         .map((comment) => ({ type: "comment", date: comment.date, comment, blog })),
     );
 
-    return [...myBlogs, ...myComments].sort(
+    return [...userBlogs, ...userComments].sort(
       (a, b) => moment(b.date).valueOf() - moment(a.date).valueOf(),
     );
-  }, [blogsData, user]);
+  }, [blogsData, profileUser]);
 
-  if (!user) {
+  const postsPublished = feed.filter((item) => item.type === "blog").length;
+  const commentsWritten = feed.filter((item) => item.type === "comment").length;
+  const tagsFollowed = 0; // no tag-follow tracking exists yet
+
+  if (!isOwnProfile && authUser && profileId === getUserKey(authUser)) {
+    return <Navigate to="/profile" replace />;
+  }
+
+  if (isOwnProfile && !authUser) {
     return (
       <Container>
         <div className="jumbotron display-center">
@@ -56,13 +88,41 @@ export default function Profile() {
     );
   }
 
-  const { description, location, education, work, joined_date } = user;
+  if (!isOwnProfile && !blogsLoading && !profileUser) {
+    return (
+      <Container>
+        <div className="jumbotron display-center">
+          <p>This profile could not be found.</p>
+        </div>
+      </Container>
+    );
+  }
+
+  if (!profileUser) {
+    return (
+      <Container>
+        <img
+          src="https://www.onwebchat.com/img/spinner.gif"
+          alt="Loading..."
+        />
+      </Container>
+    );
+  }
+
+  const { firstName, lastName, avatar, description, location, education, work, joined_date } =
+    profileUser;
 
   return (
     <Container>
-      <Row sm={8}>
-        <Col className="profile-wrap">
-          <h2>My Activity</h2>
+      <Row>
+        <Col
+          xs={{ span: 12, order: 2 }}
+          lg={{ span: 10, order: 2 }}
+          xl={{ span: 6, order: 1 }}
+          xxl={{ span: 8, order: 1 }}
+          className="profile-wrap"
+        >
+          <h2>{isOwnProfile ? "My Activity" : `${firstName}'s Activity`}</h2>
           {blogsLoading ? (
             <img
               src="https://www.onwebchat.com/img/spinner.gif"
@@ -70,7 +130,9 @@ export default function Profile() {
             />
           ) : feed.length === 0 ? (
             <div className="no-activity">
-              You haven&apos;t posted any blogs or comments yet.
+              {isOwnProfile
+                ? "You haven't posted any blogs or comments yet."
+                : `${firstName} hasn't posted any blogs or comments yet.`}
             </div>
           ) : (
             <div className="feed-list">
@@ -104,14 +166,30 @@ export default function Profile() {
             </div>
           )}
         </Col>
-        <Col sm={4} className="author-wrap">
+        <Col
+          xs={{ span: 12, order: 1 }}
+          lg={{ span: 10, order: 1 }}
+          xl={{ span: 5, order: 2 }}
+          xxl={{ span: 4, order: 2 }}
+          className="author-wrap"
+        >
           <div className="author blog-card">
             <div className="user-wrap">
-              <img className="avatar" alt="avatar" src={user.avatar} />
+              <img className="avatar" alt="avatar" src={avatar} />
               <div className="name">
-                {user.firstName} {user.lastName}
+                {firstName} {lastName}
               </div>
             </div>
+            {!isOwnProfile && (
+              <Button
+                className={`follow-button${follow ? " following" : ""}`}
+                variant={follow ? "outline-light" : "primary"}
+                onClick={() => setFollow((current) => !current)}
+              >
+                <span className="label-default">{follow ? "Following" : "Follow"}</span>
+                {follow && <span className="label-hover">Unfollow</span>}
+              </Button>
+            )}
             <div className="description">
               <p>{description}</p>
             </div>
@@ -144,6 +222,20 @@ export default function Profile() {
               <a href="https://youtube.com" target="_blank" rel="noreferrer">
                 <i className="fa-brands fa-youtube"></i>
               </a>
+            </div>
+          </div>
+          <div className="stats blog-card">
+            <div className="stat-row">
+              <i className="fa-regular fa-file-lines"></i>
+              <span>{postsPublished} posts published</span>
+            </div>
+            <div className="stat-row">
+              <i className="fa-regular fa-comment"></i>
+              <span>{commentsWritten} comments written</span>
+            </div>
+            <div className="stat-row">
+              <i className="fa-solid fa-hashtag"></i>
+              <span>{tagsFollowed} tags followed</span>
             </div>
           </div>
         </Col>

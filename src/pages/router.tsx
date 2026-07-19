@@ -120,6 +120,7 @@ const Router = () => {
       <Route path="/faq" element={<FAQ />} />
       <Route path="/shop" element={<Shop />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/profile/:profileId" element={<Profile />} />
       <Route path="/settings" element={<Settings />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
