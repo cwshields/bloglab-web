@@ -10,10 +10,6 @@
   }
 }
 
-.display-inline-wrap {
-  display: inline-block;
-}
-
 .tag-list-wrap {
   margin: 10px;
   .tag-list-header {
@@ -35,12 +31,12 @@
     }
     @media (max-width: 768px) {
       .search-bar {
-        max-width: 200px;
+        max-width: 220px;
       }
     }
   }
   .tag-card-wrap {
-    margin: -6px -6px 10px;
+    margin-bottom: 10px;
     .tag-card {
       a {
         color: #f2f2f2;
@@ -50,14 +46,14 @@
         color: #f2f2f2;
         text-decoration: underline;
       }
-      display: block;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       border-radius: 10px;
       background-color: #00337c;
-      width: 338px;
       padding: 20px 25px;
-      margin: 8px;
-      height: max-content;
       p {
+        flex: 1 1 auto;
         margin: 10px 0 18px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -70,6 +66,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-top: auto;
         .icon {
           position: absolute;
           right: 0;
@@ -77,16 +74,6 @@
           height: auto;
           transform: rotate(-10deg);
         }
-      }
-      @media (max-width: 768px) {
-        .tag-list-header {
-          max-width: 450px;
-        }
-      }
-    }
-    @media (max-width: 768px) {
-      .tag-card {
-        width: 95%;
       }
     }
   }

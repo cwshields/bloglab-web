@@ -14,25 +14,23 @@ export default function TagCard(props: Tag) {
   const [follow, setFollow] = useState(false);
 
   return (
-    <div className="display-inline-wrap">
-      <div className={tagClass + tagColor}>
-        <Link to={linkURL}>
-          <h4>
-            <span className={tagTextColor}>#</span>
-            {name}
-          </h4>
-        </Link>
-        <p>{description}</p>
-        <div className="footer-wrap">
-          <Button
-            className="bl-button"
-            variant={follow ? "outline-light" : "primary"}
-            onClick={() => setFollow((current) => !current)}
-          >
-            {follow ? "Following" : "Follow"}
-          </Button>
-          <img className="icon" src={icon} alt="tag icon" />
-        </div>
+    <div className={tagClass + tagColor}>
+      <Link to={linkURL}>
+        <h4>
+          <span className={tagTextColor}>#</span>
+          {name}
+        </h4>
+      </Link>
+      <p>{description}</p>
+      <div className="footer-wrap">
+        <Button
+          className="bl-button"
+          variant={follow ? "outline-light" : "primary"}
+          onClick={() => setFollow((current) => !current)}
+        >
+          {follow ? "Following" : "Follow"}
+        </Button>
+        <img className="icon" src={icon} alt="tag icon" />
       </div>
     </div>
   );
