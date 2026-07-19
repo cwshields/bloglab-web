@@ -12,6 +12,15 @@ html {
   }
 }
 
+.bloglab.container {
+  display: flex;
+  flex-direction: row;
+
+  @media (max-width: 992px) {
+    display: block;
+  }
+}
+
 .bloglab-modal {
   background-color: #00000090;
   .modal-lg {
