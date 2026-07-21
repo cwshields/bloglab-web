@@ -55,9 +55,13 @@ const Router = () => {
   const listingCategoryMap = listingCategories.map(
     (listing: ListingsType, index: number) => {
       return (
-        <Route key={index} path={`${listing.url}`} element={<ListingCardList />} />
+        <Route
+          key={index}
+          path={`${listing.url}`}
+          element={<ListingCardList />}
+        />
       );
-    }
+    },
   );
 
   const blogRoutes = blogsData?.map((blog: Blog, index: number) => {
@@ -78,7 +82,7 @@ const Router = () => {
           path={`${episode.name}`}
           element={<EpisodeDetail podcastName={podcast.name} {...episode} />}
         />
-      )
+      ),
     );
 
     return (

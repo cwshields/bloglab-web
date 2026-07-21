@@ -111,7 +111,7 @@ const tags: Array<Tag> = [
   },
   {
     name: "design",
-    color: "crimson",
+    color: "orange",
     description:
       "Sint modi molestias error nesciunt ducimus sed magnam delectus magni cum, consequatur fuga exercitationem vero reprehenderit mollitia voluptates facilis esse, tempora eum perspiciatis doloremque numquam hic.",
     guidelines:
@@ -162,6 +162,87 @@ const tags: Array<Tag> = [
     guidelines:
       "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
     icon: "https://imgur.com/d5PuPnT.png",
+  },
+  {
+    name: "astronomy",
+    color: "black",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris est iste ipsam harum commodi cupiditate, vero voluptates cupiditate adipisci saepe assumenda adipisci nisi ut aliquip ex ea commodo consequat.",
+    guidelines:
+      "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
+    icon: "https://imgur.com/3roBvj2.png",
+  },
+  {
+    name: "health",
+    color: "red",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris est iste ipsam harum commodi cupiditate, vero voluptates cupiditate adipisci saepe assumenda adipisci nisi ut aliquip ex ea commodo consequat.",
+    guidelines:
+      "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
+    icon: "https://imgur.com/YmTysDM.png",
+  },
+  {
+    name: "education",
+    color: "emerald",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris est iste ipsam harum commodi cupiditate, vero voluptates cupiditate adipisci saepe assumenda adipisci nisi ut aliquip ex ea commodo consequat.",
+    guidelines:
+      "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
+    icon: "https://imgur.com/0hrgt7b.png",
+  },
+  {
+    name: "programming",
+    color: "violet",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris est iste ipsam harum commodi cupiditate, vero voluptates cupiditate adipisci saepe assumenda adipisci nisi ut aliquip ex ea commodo consequat.",
+    guidelines:
+      "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
+    icon: "https://imgur.com/qBR1re5.png",
+  },
+  {
+    name: "cooking",
+    color: "yellow",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris est iste ipsam harum commodi cupiditate, vero voluptates cupiditate adipisci saepe assumenda adipisci nisi ut aliquip ex ea commodo consequat.",
+    guidelines:
+      "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
+    icon: "https://imgur.com/ayLS3CI.png",
+  },
+  {
+    name: "guides",
+    color: "aqua",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris est iste ipsam harum commodi cupiditate, vero voluptates cupiditate adipisci saepe assumenda adipisci nisi ut aliquip ex ea commodo consequat.",
+    guidelines:
+      "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
+    icon: "https://imgur.com/EzP3PM9.png",
+  },
+  {
+    name: "sports",
+    color: "marmalade",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris est iste ipsam harum commodi cupiditate, vero voluptates cupiditate adipisci saepe assumenda adipisci nisi ut aliquip ex ea commodo consequat.",
+    guidelines:
+      "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
+    icon: "https://imgur.com/ByJ4Xhh.png",
+  },
+  {
+    name: "travel",
+    color: "yellow",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris est iste ipsam harum commodi cupiditate, vero voluptates cupiditate adipisci saepe assumenda adipisci nisi ut aliquip ex ea commodo consequat.",
+    guidelines:
+      "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
+    icon: "https://imgur.com/2AHf0Gv.png",
+  },
+  {
+    name: "finance",
+    color: "green",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris est iste ipsam harum commodi cupiditate, vero voluptates cupiditate adipisci saepe assumenda adipisci nisi ut aliquip ex ea commodo consequat.",
+    guidelines:
+      "Quisquam aperiam in sint itaque sed tenetur dolor officia neque nemo, aspernatur debitis sequi asperiores qui aliquam soluta ex harum libero molestiae inventore officiis ut.",
+    icon: "https://imgur.com/s3MRgKz.png",
   },
 ];
 

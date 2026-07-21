@@ -18,13 +18,18 @@ function isSameUser(a: User, b: User): boolean {
   return a.firstName === b.firstName && a.lastName === b.lastName;
 }
 
+function mergeUser(users: Map<string, User>, user: User) {
+  const key = getUserKey(user);
+  users.set(key, { ...users.get(key), ...user });
+}
+
 function collectUsers(blogsData?: Array<Blog>): User[] {
   if (!blogsData) return [];
   const users = new Map<string, User>();
   blogsData.forEach((blog) => {
-    users.set(getUserKey(blog.user), blog.user);
+    mergeUser(users, blog.user);
     (blog.comments ?? []).forEach((comment) => {
-      users.set(getUserKey(comment.user), comment.user);
+      mergeUser(users, comment.user);
     });
   });
   return [...users.values()];
