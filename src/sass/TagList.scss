@@ -16,7 +16,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    padding-right: 8px;
     h2 {
       min-width: max-content;
       margin-right: 16px;
@@ -25,9 +24,6 @@
       width: 300px;
     }
     @media (min-width: 1400px) {
-      .search-bar {
-        margin-right: 26px;
-      }
     }
     @media (max-width: 768px) {
       .search-bar {
