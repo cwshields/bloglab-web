@@ -23,8 +23,6 @@
     form {
       width: 300px;
     }
-    @media (min-width: 1400px) {
-    }
     @media (max-width: 768px) {
       .search-bar {
         max-width: 220px;
@@ -54,6 +52,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
+        line-clamp: 4;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
       }
