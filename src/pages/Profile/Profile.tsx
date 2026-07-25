@@ -3,11 +3,15 @@ import moment from "moment";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-import { useGetData } from "../../data/bloglabDataHooks";
+import { useBlogsData } from "../../context/BlogsDataContext";
 import BlogCard from "../BlogCard/BlogCard";
 import FormTabModal from "../../components/FormTabModal/FormTabModal";
+import CommentActionsModal from "../../components/CommentActionsModal/CommentActionsModal";
+import ConfirmDeleteModal from "../../components/ConfirmDeleteModal/ConfirmDeleteModal";
 import slugify from "../../utils/slugify";
 import getUserKey from "../../utils/getUserKey";
+import useLongPress from "../../utils/useLongPress";
+import { editBlogCommentRequest, deleteBlogCommentRequest } from "../../axios/commentApi";
 import "../../sass/Profile.scss";
 import "../../sass/BlogCard.scss";
 
@@ -38,9 +42,19 @@ function collectUsers(blogsData?: Array<Blog>): User[] {
 export default function Profile() {
   const { user: authUser } = useAuth();
   const { profileId } = useParams<{ profileId?: string }>();
-  const [blogsData, blogsLoading] = useGetData("blogs");
+  const { blogsData, blogsLoading, refetchBlogs } = useBlogsData();
   const [showLoginModal, setShowLoginModal] = useState(false);
   const [follow, setFollow] = useState(false);
+  const [editingId, setEditingId] = useState<number | null>(null);
+  const [editText, setEditText] = useState("");
+  const [savingEdit, setSavingEdit] = useState(false);
+  const [editError, setEditError] = useState<string | null>(null);
+  const [commentOverrides, setCommentOverrides] = useState<
+    Record<number, { body?: string; deleted?: boolean }>
+  >({});
+  const [actionsComment, setActionsComment] = useState<Comment | null>(null);
+  const [confirmDeleteId, setConfirmDeleteId] = useState<number | null>(null);
+  const [deleting, setDeleting] = useState(false);
 
   const isOwnProfile = !profileId;
 
@@ -61,17 +75,91 @@ export default function Profile() {
     const userComments: ProfileFeedItem[] = blogsData.flatMap((blog) =>
       (blog.comments ?? [])
         .filter((comment) => isSameUser(comment.user, profileUser))
-        .map((comment) => ({ type: "comment", date: comment.date, comment, blog })),
+        .filter((comment) => !commentOverrides[comment.id]?.deleted)
+        .map((comment) => {
+          const overrideBody = commentOverrides[comment.id]?.body;
+          return {
+            type: "comment",
+            date: comment.date,
+            comment: overrideBody !== undefined ? { ...comment, body: overrideBody } : comment,
+            blog,
+          };
+        }),
     );
 
     return [...userBlogs, ...userComments].sort(
       (a, b) => moment(b.date).valueOf() - moment(a.date).valueOf(),
     );
-  }, [blogsData, profileUser]);
+  }, [blogsData, profileUser, commentOverrides]);
 
   const postsPublished = feed.filter((item) => item.type === "blog").length;
   const commentsWritten = feed.filter((item) => item.type === "comment").length;
   const tagsFollowed = 0; // no tag-follow tracking exists yet
+
+  const startEditingComment = (comment: Comment) => {
+    setEditingId(comment.id);
+    setEditText(comment.body);
+    setEditError(null);
+  };
+
+  const cancelEditingComment = () => {
+    setEditingId(null);
+    setEditText("");
+  };
+
+  const saveCommentEdit = async (commentId: number) => {
+    if (!editText.trim() || savingEdit) return;
+
+    setSavingEdit(true);
+    setEditError(null);
+    try {
+      const updated = await editBlogCommentRequest(commentId, editText.trim());
+      setCommentOverrides((current) => ({
+        ...current,
+        [commentId]: { ...current[commentId], body: updated.body },
+      }));
+      cancelEditingComment();
+      refetchBlogs().catch(() => {});
+    } catch (err) {
+      setEditError("Failed to update comment. Please try again.");
+    } finally {
+      setSavingEdit(false);
+    }
+  };
+
+  const performDeleteComment = async (commentId: number) => {
+    setEditError(null);
+    setDeleting(true);
+    try {
+      await deleteBlogCommentRequest(commentId);
+      setCommentOverrides((current) => ({
+        ...current,
+        [commentId]: { ...current[commentId], deleted: true },
+      }));
+      refetchBlogs().catch(() => {});
+      setConfirmDeleteId(null);
+    } catch (err) {
+      setEditError("Failed to delete comment. Please try again.");
+    } finally {
+      setDeleting(false);
+    }
+  };
+
+  const closeActionsModal = () => setActionsComment(null);
+
+  const handleEditFromModal = () => {
+    if (!actionsComment) return;
+    startEditingComment(actionsComment);
+    closeActionsModal();
+  };
+
+  const handleDeleteFromModal = () => {
+    if (!actionsComment) return;
+    setConfirmDeleteId(actionsComment.id);
+    closeActionsModal();
+  };
+
+  const bindLongPress = useLongPress<Comment>(setActionsComment);
 
   if (!isOwnProfile && authUser && profileId === getUserKey(authUser)) {
     return <Navigate to="/profile" replace />;
@@ -141,11 +229,38 @@ export default function Profile() {
             </div>
           ) : (
             <div className="feed-list">
-              {feed.map((item, index) =>
+              {feed.map((item) =>
                 item.type === "blog" ? (
                   <BlogCard key={`blog-${item.blog.id}`} {...item.blog} />
                 ) : (
-                  <div className="comment-feed-card" key={`comment-${index}`}>
+                  <div
+                    className="comment-feed-card"
+                    key={`comment-${item.comment.id}`}
+                    {...bindLongPress(
+                      item.comment,
+                      !!item.comment.isOwnComment && editingId !== item.comment.id,
+                    )}
+                  >
+                    {item.comment.isOwnComment && editingId !== item.comment.id && (
+                      <div className="comment-actions">
+                        <button
+                          type="button"
+                          className="icon-btn"
+                          aria-label="Edit comment"
+                          onClick={() => startEditingComment(item.comment)}
+                        >
+                          <i className="fa-solid fa-pen"></i>
+                        </button>
+                        <button
+                          type="button"
+                          className="icon-btn"
+                          aria-label="Delete comment"
+                          onClick={() => setConfirmDeleteId(item.comment.id)}
+                        >
+                          <i className="fa-solid fa-trash"></i>
+                        </button>
+                      </div>
+                    )}
                     <div className="user-wrap">
                       <img
                         className="avatar"
@@ -164,7 +279,31 @@ export default function Profile() {
                         </div>
                       </div>
                     </div>
-                    <div className="body">{item.comment.body}</div>
+                    {editingId === item.comment.id ? (
+                      <div className="comment-edit">
+                        <textarea
+                          rows={3}
+                          value={editText}
+                          onChange={(e) => setEditText(e.target.value)}
+                        />
+                        {editError && <div className="comment-error">{editError}</div>}
+                        <div className="comment-edit-actions">
+                          <Button
+                            size="sm"
+                            variant="success"
+                            disabled={savingEdit || !editText.trim()}
+                            onClick={() => saveCommentEdit(item.comment.id)}
+                          >
+                            {savingEdit ? "Saving..." : "Save"}
+                          </Button>
+                          <Button size="sm" variant="outline-light" onClick={cancelEditingComment}>
+                            Cancel
+                          </Button>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="body">{item.comment.body}</div>
+                    )}
                   </div>
                 ),
               )}
@@ -245,6 +384,20 @@ export default function Profile() {
           </div>
         </Col>
       </Row>
+      <CommentActionsModal
+        show={!!actionsComment}
+        onHide={closeActionsModal}
+        canEdit={!!actionsComment?.isOwnComment}
+        canDelete={!!actionsComment?.isOwnComment}
+        onEdit={handleEditFromModal}
+        onDelete={handleDeleteFromModal}
+      />
+      <ConfirmDeleteModal
+        show={confirmDeleteId !== null}
+        onHide={() => setConfirmDeleteId(null)}
+        onConfirm={() => confirmDeleteId !== null && performDeleteComment(confirmDeleteId)}
+        deleting={deleting}
+      />
     </Container>
   );
 }

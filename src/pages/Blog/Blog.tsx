@@ -9,7 +9,7 @@ import CommentList from "../../components/CommentList/CommentList";
 import getUserKey from "../../utils/getUserKey";
 
 export default function Blog(props: Blog) {
-  const { title, body, user, date, comments } = props;
+  const { id, title, body, user, date, comments } = props;
   const { description, location, education, work, joined_date } = user;
   const [follow, setFollow] = useState(false);
   const bodyHtml = useMemo(
@@ -38,7 +38,7 @@ export default function Blog(props: Blog) {
               dangerouslySetInnerHTML={{ __html: bodyHtml }}
             />
           </div>
-          <CommentList comments={comments ?? []} />
+          <CommentList comments={comments ?? []} blogId={id} />
         </Col>
         <Col sm={4} className="author-wrap">
           <div className="author blog-card">

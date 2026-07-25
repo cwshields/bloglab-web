@@ -17,9 +17,12 @@ declare global {
   }
 
   interface Comment {
+    id: number;
     body: string;
     date: string;
     createdAt?: string;
+    updatedAt?: string;
+    isOwnComment?: boolean;
     user: User;
   }
 
@@ -120,6 +123,7 @@ declare global {
 
   interface CommentListProps {
     comments: Array<Comment>;
+    blogId?: number;
   }
 
   type ProfileFeedItem =
@@ -151,6 +155,22 @@ declare global {
   interface FormTabModalProps {
     show: boolean;
     onHide: () => void;
+  }
+
+  interface CommentActionsModalProps {
+    show: boolean;
+    onHide: () => void;
+    canEdit: boolean;
+    canDelete: boolean;
+    onEdit: () => void;
+    onDelete: () => void;
+  }
+
+  interface ConfirmDeleteModalProps {
+    show: boolean;
+    onHide: () => void;
+    onConfirm: () => void;
+    deleting: boolean;
   }
 
   interface LoginModalProps {
