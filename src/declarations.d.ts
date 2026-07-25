@@ -19,6 +19,7 @@ declare global {
   interface Comment {
     body: string;
     date: string;
+    createdAt?: string;
     user: User;
   }
 
@@ -140,6 +141,13 @@ declare global {
     updateUser: (data: Partial<User>) => void;
   }
 
+  interface BlogsDataContextValue {
+    blogsData: Array<Blog> | undefined;
+    blogsLoading: boolean;
+    blogsError: AxiosError<any, any> | null;
+    refetchBlogs: () => Promise<any>;
+  }
+
   interface FormTabModalProps {
     show: boolean;
     onHide: () => void;
@@ -176,11 +184,11 @@ declare global {
   type DataType = "blogs" | "listings" | "podcasts";
 
   type GetDataType<T extends DataType> = T extends "blogs"
-    ? [Array<Blog>, boolean, AxiosError<any, any> | null]
+    ? [Array<Blog>, boolean, AxiosError<any, any> | null, () => Promise<any>]
     : T extends "listings"
-      ? [Array<Listing>, boolean, AxiosError<any, any> | null]
+      ? [Array<Listing>, boolean, AxiosError<any, any> | null, () => Promise<any>]
       : T extends "podcasts"
-        ? [Array<Podcast>, boolean, AxiosError<any, any> | null]
+        ? [Array<Podcast>, boolean, AxiosError<any, any> | null, () => Promise<any>]
         : any[];
 
   type LoginDataType = {

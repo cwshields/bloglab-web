@@ -1,8 +1,8 @@
 import { createContext, useContext, useState } from "react";
 import { loginRequest, registerRequest } from "../axios/authApi";
+import { TOKEN_STORAGE_KEY } from "../axios/client";
 
 const AUTH_STORAGE_KEY = "bloglab-auth-user";
-const TOKEN_STORAGE_KEY = "bloglab-auth-token";
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 

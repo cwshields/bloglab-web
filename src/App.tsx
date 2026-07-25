@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import SideNav from "./components/SideNav/SideNav";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AuthProvider } from "./context/AuthContext";
+import { BlogsDataProvider } from "./context/BlogsDataContext";
 
 export default function App() {
   useEffect(() => {
@@ -14,13 +15,15 @@ export default function App() {
 
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <Navbar />
-        <div className="bloglab container">
-          <SideNav />
-          <Router />
-        </div>
-      </BrowserRouter>
+      <BlogsDataProvider>
+        <BrowserRouter>
+          <Navbar />
+          <div className="bloglab container">
+            <SideNav />
+            <Router />
+          </div>
+        </BrowserRouter>
+      </BlogsDataProvider>
     </AuthProvider>
   );
 }

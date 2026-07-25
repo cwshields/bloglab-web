@@ -29,6 +29,9 @@ import Settings from "./Settings/Settings";
 import tags from "../data/tags";
 import { useGetData } from "../data/bloglabDataHooks";
 
+// Context
+import { useBlogsData } from "../context/BlogsDataContext";
+
 // Types
 import listingCategories from "../data/listingCategories";
 
@@ -36,7 +39,7 @@ import listingCategories from "../data/listingCategories";
 import slugify from "../utils/slugify";
 
 const Router = () => {
-  const [blogsData] = useGetData("blogs");
+  const { blogsData } = useBlogsData();
   const [podcastsData] = useGetData("podcasts");
 
   const tagArrayFilter = (arg: string) =>
